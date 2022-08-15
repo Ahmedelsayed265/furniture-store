@@ -1,8 +1,14 @@
 import React, { Component } from "react";
+import "./app.css";
+import Nav from "./../components/navigation/nav";
 class App extends Component {
   state = {};
   render() {
-    return <h1>furniture store</h1>;
+    return (
+      <React.Fragment>
+        <Nav />
+      </React.Fragment>
+    );
   }
 }
 
