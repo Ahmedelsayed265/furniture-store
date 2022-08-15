@@ -2,13 +2,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 60px;
 }
 .nav_header {
+  padding: 0 60px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #cccccc;
 }
 .left_head span {
   font-size: 14px;
@@ -22,4 +23,7 @@
 }
 .right_head div span i {
   font-size: 14px;
+}
+.right_head div span{
+  cursor: pointer;
 }
