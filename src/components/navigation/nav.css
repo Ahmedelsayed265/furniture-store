@@ -6,6 +6,7 @@
 .nav_header {
   padding: 0 60px;
   height: 50px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,6 +25,45 @@
 .right_head div span i {
   font-size: 14px;
 }
-.right_head div span{
+.right_head div span {
   cursor: pointer;
+}
+.navigation nav {
+  padding: 0 60px;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left_sup_nav {
+  gap: 40px;
+}
+.left_sup_nav a img {
+  width: 120px;
+}
+.left_sup_nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.left_sup_nav ul li a {
+  color: #000;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.right_sup_nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+}
+.right_sup_nav ul li a {
+  color: #000;
+  font-size: 16px;
+}
+.right_sup_nav ul li a i,
+ion-icon {
+  margin-right: 5px;
 }
