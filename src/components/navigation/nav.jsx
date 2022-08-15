@@ -63,33 +63,33 @@ class Nav extends Component {
                   <Link to="/home">HOME</Link>
                 </li>
                 <li>
-                  <Link to="#">ABOUT</Link>
+                  <Link to="/about">ABOUT</Link>
                 </li>
                 <li>
-                  <Link to="#">Gallery</Link>
+                  <Link to="/gallery">Gallery</Link>
                 </li>
                 <li>
-                  <Link to="#">SHOP</Link>
+                  <Link to="/shop">SHOP</Link>
                 </li>
                 <li>
-                  <Link to="#">CONTACT</Link>
+                  <Link to="/contact">CONTACT</Link>
                 </li>
               </ul>
             </div>
             <div className="right_sup_nav d-flex align-items-center">
               <ul>
                 <li>
-                  <Link to="#">
+                  <Link to="/login">
                     <i className="far fa-user"></i>Account
                   </Link>
                 </li>
                 <li>
-                  <Link to="#">
+                  <Link to="/wishlist">
                     <i className="far fa-heart"></i>Wishlist
                   </Link>
                 </li>
                 <li>
-                  <Link to="#">
+                  <Link to="/cart">
                     <ion-icon name="bag-outline"></ion-icon>
                     Cart $0.00
                   </Link>

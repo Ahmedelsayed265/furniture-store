@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import Nav from "./../components/navigation/nav";
-import Home from "./../components/home/home";
+import HomeComp from "./../components/main/home";
 import "./app.css";
 
 class App extends Component {
@@ -10,9 +10,9 @@ class App extends Component {
     return (
       <React.Fragment>
         <Nav />
-        <div className="container">
+        <div className="container p-0">
           <Switch>
-            <Route path="/home" component={Home} />
+            <Route path="/home" component={HomeComp} />
           </Switch>
         </div>
       </React.Fragment>
