@@ -2,4 +2,24 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 0 60px;
+}
+.nav_header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left_head span {
+  font-size: 14px;
+  color: #000;
+}
+.right_head div {
+  gap: 17px;
+}
+.right_head div a {
+  color: #000;
+}
+.right_head div span i {
+  font-size: 14px;
 }
