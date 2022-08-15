@@ -43,13 +43,13 @@ class Nav extends Component {
                   <Link to="#">ABOUT</Link>
                 </li>
                 <li>
-                  <Link to="#">CONTACT</Link>
-                </li>
-                <li>
                   <Link to="#">Gallery</Link>
                 </li>
                 <li>
                   <Link to="#">SHOP</Link>
+                </li>
+                <li>
+                  <Link to="#">CONTACT</Link>
                 </li>
               </ul>
             </div>
