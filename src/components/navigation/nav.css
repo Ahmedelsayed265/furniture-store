@@ -64,6 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #cccccc;
 }
 .left_sup_nav {
   gap: 40px;
