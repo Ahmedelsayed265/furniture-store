@@ -4,6 +4,14 @@ import "./nav.css";
 import smStar from "./../assest/smStar.png";
 import EskilLogo from "./../assest/EskilLogo.png";
 class Nav extends Component {
+  state = {
+    isActive: false,
+  };
+  toggle = () => {
+    let activeClass = this.state.isActive;
+    activeClass = !activeClass;
+    this.setState({ isActive: activeClass });
+  };
   render() {
     return (
       <React.Fragment>
@@ -24,15 +32,23 @@ class Nav extends Component {
                 <Link to="#">
                   <i className="fab fa-twitter"></i>
                 </Link>
-                <span>
+                <span onClick={this.toggle}>
                   English <i className="fas fa-angle-down"></i>
                 </span>
-                <div className="down_drop">
-                <ul>
-                <li><i class="fas fa-arrow-right"></i>French</li>
-                <li><i class="fas fa-arrow-right"></i>Greek</li>
-                <li><i class="fas fa-arrow-right"></i>Italian</li>
-                </ul>
+                <div
+                  className={`down_drop ${this.state.isActive ? "active" : ""}`}
+                >
+                  <ul>
+                    <li>
+                      <i className="fas fa-arrow-right"></i>French
+                    </li>
+                    <li>
+                      <i className="fas fa-arrow-right"></i>Greek
+                    </li>
+                    <li>
+                      <i className="fas fa-arrow-right"></i>Italian
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
