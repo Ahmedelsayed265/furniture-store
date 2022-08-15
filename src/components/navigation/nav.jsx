@@ -60,7 +60,7 @@ class Nav extends Component {
               </Link>
               <ul>
                 <li>
-                  <Link to="#">HOME</Link>
+                  <Link to="/home">HOME</Link>
                 </li>
                 <li>
                   <Link to="#">ABOUT</Link>
