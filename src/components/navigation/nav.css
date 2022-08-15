@@ -11,22 +11,46 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #cccccc;
+  position: relative;
 }
 .left_head span {
   font-size: 14px;
   color: #000;
 }
 .right_head div {
-  gap: 17px;
+  gap: 20px;
 }
 .right_head div a {
   color: #000;
 }
 .right_head div span i {
-  font-size: 14px;
+  font-size: 13px;
 }
 .right_head div span {
   cursor: pointer;
+}
+.right_head div .down_drop {
+  width: 110px;
+  height: 114px;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  right: 60px;
+  z-index: 23;
+}
+.right_head div .down_drop ul li {
+  margin: 10px 0 auto 15px;
+  cursor: pointer;
+}
+.right_head div .down_drop ul li:hover i {
+  width: 14px;
+}
+.right_head div .down_drop ul li i {
+  font-size: 12px;
+  margin-right: 5px;
+  width: 0;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
 }
 .navigation nav {
   padding: 0 60px;

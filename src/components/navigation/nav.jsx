@@ -27,6 +27,13 @@ class Nav extends Component {
                 <span>
                   English <i className="fas fa-angle-down"></i>
                 </span>
+                <div className="down_drop">
+                <ul>
+                <li><i class="fas fa-arrow-right"></i>French</li>
+                <li><i class="fas fa-arrow-right"></i>Greek</li>
+                <li><i class="fas fa-arrow-right"></i>Italian</li>
+                </ul>
+                </div>
               </div>
             </div>
           </div>
