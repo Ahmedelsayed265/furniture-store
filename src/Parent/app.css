@@ -16,7 +16,25 @@ ul {
   margin: 0;
   padding: 0;
 }
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background-color: #cccccc;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  height: 100px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+    rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+}
 ::selection{
   background: #000;
   color: #fff;
+}
+.main_entire{
+  width: 100%;
+  padding: 0 60px;
+  height: 100%;
 }

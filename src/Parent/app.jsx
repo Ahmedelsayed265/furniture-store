@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Nav />
-        <div className="container p-0">
+        <div className="main_entire">
           <Switch>
             <Route path="/home" component={HomeComp} />
           </Switch>

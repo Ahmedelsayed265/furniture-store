@@ -55,7 +55,7 @@ class Nav extends Component {
           </div>
           <nav>
             <div className="left_sup_nav d-flex align-items-center">
-              <Link to="#">
+              <Link to="/home">
                 <img src={EskilLogo} alt="Logo" />
               </Link>
               <ul>
