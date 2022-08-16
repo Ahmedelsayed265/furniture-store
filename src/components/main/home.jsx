@@ -103,6 +103,15 @@ class HomeComp extends Component {
             </div>
           </div>
         </div>
+        <div className="row featured">
+          <div className="col-12 mb-5">
+            <p className="text-center mb-1 mt-5">BROWSE OUR ITEMS</p>
+            <h2 className="text-center">Ideal for your home</h2>
+            <div className="line">
+              <span></span>
+            </div>
+          </div>
+        </div>
       </React.Fragment>
     );
   }
