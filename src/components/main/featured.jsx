@@ -1,6 +1,6 @@
 import React from "react";
 import "./featured.css";
-const FeaturedComponent = () => {
+const FeaturedComponent = (props) => {
   return (
     <React.Fragment>
       <div className="col-4 p-0 pro_card">
@@ -9,11 +9,13 @@ const FeaturedComponent = () => {
             <img src="" alt="" />
           </div>
           <div className="img_caption">
-            <p></p>
+            <p>{props.product.name}</p>
           </div>
           <div className="add_cart">
-            <span></span>
-            <div className="link"><ion-icon name="bag-outline"></ion-icon>ADD TO CART</div>
+            <span>{props.product.price}</span>
+            <div className="link">
+              <ion-icon name="bag-outline"></ion-icon>ADD TO CART
+            </div>
           </div>
         </div>
       </div>
