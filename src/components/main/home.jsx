@@ -12,6 +12,10 @@ import brand3 from "./../assest/brand3.png";
 import brand4 from "./../assest/brand4.png";
 import brand5 from "./../assest/brand5.png";
 import brand6 from "./../assest/brand6.png";
+import team1 from "./../assest/team1.jpg";
+import team2 from "./../assest/team2.jpg";
+import team3 from "./../assest/team3.jpg";
+import team4 from "./../assest/team4.jpg";
 
 const HomeComp = (props) => {
   return (
@@ -112,8 +116,53 @@ const HomeComp = (props) => {
           </div>
         </div>
         {props.products.map((product) => (
-          <FeaturedComponent product={product} key={product.id}/>
+          <FeaturedComponent product={product} key={product.id} />
         ))}
+      </div>
+      <div className="row team">
+        <div className="col-12 mb-5">
+          <p className="text-center mb-1 mt-5">OUR CREATIVE FORCE</p>
+          <h2 className="text-center">Meet our team</h2>
+          <div className="line">
+            <span></span>
+          </div>
+        </div>
+        <div className="col-3">
+          <div className="team_img">
+            <img src={team4} alt="team1" />
+          </div>
+          <div className="job_title">
+            <h3>Nicolette Ritonni</h3>
+            <p>FINE CERAMICS</p>
+          </div>
+        </div>
+        <div className="col-3">
+          <div className="team_img">
+            <img src={team2} alt="team1" />
+          </div>
+          <div className="job_title">
+            <h3>Nicolas Waldau</h3>
+            <p>ARCHITECT</p>
+          </div>
+        </div>
+        <div className="col-3">
+          <div className="team_img">
+            <img src={team3} alt="team1" />
+          </div>
+          <div className="job_title">
+            <h3>Juliette Massé</h3>
+            <p>STORE MANAGER</p>
+          </div>
+        </div>
+        <div className="col-3">
+          <div className="team_img">
+            <img src={team1} alt="team1" />
+          </div>
+          <div className="job_title">
+            <h3>Yeung Ngai</h3>
+            <p>DESIGNER</p>
+          </div>
+        </div>
       </div>
     </React.Fragment>
   );
