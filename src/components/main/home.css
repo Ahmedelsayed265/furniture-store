@@ -113,3 +113,25 @@
   font-size: 16px;
   font-weight: 400;
 }
+.brands_wrap {
+  height: 280px;
+  border-bottom: 1px solid #cccccc;
+}
+.brands_wrap .brands {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.brands_wrap .brands div {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brands_wrap .brands div img {
+width: 100%;
+  cursor: pointer;
+}
+.brands_wrap .brands div img:hover {
+  margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
+}
