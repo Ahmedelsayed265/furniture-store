@@ -22,7 +22,7 @@
 .vid_entire .sm-caption img {
   width: 23px;
   height: 26px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .vid_entire .sm-caption .caption {
   height: 300px;
@@ -33,8 +33,8 @@
 .vid_entire .sm-caption .caption p {
   transform: rotate(-90deg);
   position: absolute;
-  top: 130px;
-  left: -140px;
+  top: 125px;
+  left: -142px;
   height: 20px;
   width: 300px;
   margin: 0;
@@ -53,7 +53,7 @@
 }
 .sitetitle .head h1 {
   color: #000;
-  font-size: 42px;
+  font-size: 41px;
   line-height: 1.42em;
   font-weight: 400;
 }
@@ -72,13 +72,13 @@
   padding: 5px 15px;
 }
 .quick_access {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .quick_access ul li {
   margin-top: 10px;
 }
 .quick_access ul li a:hover i {
-  width: 14px;
+  width: 15px;
   margin-right: 4px;
 }
 .quick_access ul li i {
@@ -91,4 +91,21 @@
 .quick_access ul li a {
   color: #000;
   text-transform: uppercase;
+}
+.header_content .col-3 .last_container{
+  width: 100%;
+  height: 100%;
+  padding: 55px 0 0 40px;
+}
+.header_content .col-3 .last_container img{
+width: 90%;
+margin: 0 0 0 auto;
+}
+.header_content .col-3 .last_container p{
+  width: 90%;
+margin: 0 0 0 auto;
+  margin-top: 25px !important;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
 }

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./home.css";
 import EskilMP4 from "./../assest/EskilMP4.mp4";
 import smStar from "./../assest/smStar.png";
+import SMChair from "./../assest/SMChair.jpg";
 class HomeComp extends Component {
   state = {};
   render() {
@@ -27,22 +28,24 @@ class HomeComp extends Component {
               <ul>
                 <li>
                   <Link to="/cart">
-                    <i class="fa-solid fa-arrow-right-long"></i>chair
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>chair
                   </Link>
                 </li>
                 <li>
                   <Link to="/cart">
-                    <i class="fa-solid fa-arrow-right-long"></i>home decor
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>home
+                    decor
                   </Link>
                 </li>
                 <li>
                   <Link to="/cart">
-                    <i class="fa-solid fa-arrow-right-long"></i>tabels
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>tabels
                   </Link>
                 </li>
                 <li>
                   <Link to="/cart">
-                    <i class="fa-solid fa-arrow-right-long"></i>lighting
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    lighting
                   </Link>
                 </li>
               </ul>
@@ -58,7 +61,15 @@ class HomeComp extends Component {
           </div>
           <video loop muted autoPlay playsInline src={EskilMP4} />
         </div>
-        <div className="col-3 p-0"></div>
+        <div className="col-3  p-0 ">
+          <div className="last_container d-flex flex-column">
+            <img src={SMChair} alt="chair" />
+            <p>
+              The perfect place for every contemporary furniture store and
+              manufacture. This is Eskil
+            </p>
+          </div>
+        </div>
       </div>
     );
   }
