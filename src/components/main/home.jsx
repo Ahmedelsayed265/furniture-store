@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
 import EskilMP4 from "./../assest/EskilMP4.mp4";
+import smStar from "./../assest/smStar.png";
 class HomeComp extends Component {
   state = {};
   render() {
@@ -20,29 +21,41 @@ class HomeComp extends Component {
               </p>
             </div>
             <div className="read_more">
-              <Link to="/about">
-                Learn More <i className="fas fa-arrow-right"></i>
-              </Link>
+              <Link to="/about">Learn More</Link>
             </div>
             <div className="quick_access">
               <ul>
                 <li>
-                  <Link to="/cart">chair</Link>
+                  <Link to="/cart">
+                    <i class="fa-solid fa-arrow-right-long"></i>chair
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/cart">home decor</Link>
+                  <Link to="/cart">
+                    <i class="fa-solid fa-arrow-right-long"></i>home decor
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/cart">tabels</Link>
+                  <Link to="/cart">
+                    <i class="fa-solid fa-arrow-right-long"></i>tabels
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/cart">lighting</Link>
+                  <Link to="/cart">
+                    <i class="fa-solid fa-arrow-right-long"></i>lighting
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         <div className="col-5 p-0 vid_entire">
+          <div className="sm-caption">
+            <div className="caption">
+              <p>10% discount for registered users</p>
+            </div>
+            <img src={smStar} alt="star" />
+          </div>
           <video loop muted autoPlay playsInline src={EskilMP4} />
         </div>
         <div className="col-3 p-0"></div>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -29,11 +29,11 @@ ul {
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
     rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
 }
-::selection{
+::selection {
   background: #000;
   color: #fff;
 }
-.main_entire{
+.main_entire {
   width: 100%;
   padding: 0 60px;
   height: 100%;
