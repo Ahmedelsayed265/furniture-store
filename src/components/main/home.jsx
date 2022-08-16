@@ -112,7 +112,7 @@ const HomeComp = (props) => {
           </div>
         </div>
         {props.products.map((product) => (
-          <FeaturedComponent product={product}/>
+          <FeaturedComponent product={product} key={product.id}/>
         ))}
       </div>
     </React.Fragment>

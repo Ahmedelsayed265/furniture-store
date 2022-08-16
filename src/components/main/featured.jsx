@@ -6,7 +6,7 @@ const FeaturedComponent = (props) => {
       <div className="col-4 p-0 pro_card">
         <div className="inner_card">
           <div className="img_wraper">
-            <img src="" alt="" />
+            <img src={props.product.url} alt="" />
           </div>
           <div className="img_caption">
             <p>{props.product.name}</p>

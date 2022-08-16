@@ -6,6 +6,7 @@
 }
 .pro_card img {
   max-width: 100%;
+  mix-blend-mode: multiply;
 }
 .pro_card .add_cart {
   overflow: hidden;
@@ -17,11 +18,13 @@
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 1;
 }
 .pro_card .add_cart .link {
   position: absolute;
   top: 100%;
   left: 0;
+  opacity: 0;
   cursor: pointer;
 }
 .pro_card .add_cart .link ion-icon {
@@ -38,9 +41,11 @@
 
 .pro_card:hover .inner_card .add_cart span {
   top: 100%;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
 }
 .pro_card:hover .inner_card .add_cart .link {
   top: 0;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
+  opacity: 1;
 }
