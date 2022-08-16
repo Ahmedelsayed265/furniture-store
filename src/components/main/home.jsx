@@ -127,7 +127,7 @@ const HomeComp = (props) => {
             <span></span>
           </div>
         </div>
-        <div className="col-3">
+        <div className="col-3 Team_card">
           <div className="team_img">
             <img src={team4} alt="team1" />
           </div>
@@ -136,7 +136,7 @@ const HomeComp = (props) => {
             <p>FINE CERAMICS</p>
           </div>
         </div>
-        <div className="col-3">
+        <div className="col-3 Team_card">
           <div className="team_img">
             <img src={team2} alt="team1" />
           </div>
@@ -145,7 +145,7 @@ const HomeComp = (props) => {
             <p>ARCHITECT</p>
           </div>
         </div>
-        <div className="col-3">
+        <div className="col-3 Team_card">
           <div className="team_img">
             <img src={team3} alt="team1" />
           </div>
@@ -154,7 +154,7 @@ const HomeComp = (props) => {
             <p>STORE MANAGER</p>
           </div>
         </div>
-        <div className="col-3">
+        <div className="col-3 Team_card">
           <div className="team_img">
             <img src={team1} alt="team1" />
           </div>
