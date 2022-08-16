@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./nav.css";
 import smStar from "./../assest/smStar.png";
 import EskilLogo from "./../assest/EskilLogo.png";
@@ -60,19 +60,19 @@ class Nav extends Component {
               </Link>
               <ul>
                 <li>
-                  <Link to="/home">HOME</Link>
+                  <NavLink to="/home">HOME</NavLink>
                 </li>
                 <li>
-                  <Link to="/about">ABOUT</Link>
+                  <NavLink to="/about">ABOUT</NavLink>
                 </li>
                 <li>
-                  <Link to="/gallery">Gallery</Link>
+                  <NavLink to="/gallery">Gallery</NavLink>
                 </li>
                 <li>
-                  <Link to="/shop">SHOP</Link>
+                  <NavLink to="/shop">SHOP</NavLink>
                 </li>
                 <li>
-                  <Link to="/contact">CONTACT</Link>
+                  <NavLink to="/contact">CONTACT</NavLink>
                 </li>
               </ul>
             </div>
