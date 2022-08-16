@@ -1,0 +1,46 @@
+.pro_card .inner_card {
+  padding: 20px 35px 35px !important;
+  border: 1px solid #cccccc;
+  display: flex;
+  flex-direction: column;
+}
+.pro_card img {
+  max-width: 100%;
+}
+.pro_card .add_cart {
+  overflow: hidden;
+  width: 100%;
+  height: 25px;
+  position: relative;
+}
+.pro_card .add_cart span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pro_card .add_cart .link {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  cursor: pointer;
+}
+.pro_card .add_cart .link ion-icon {
+  margin-right: 0;
+  font-size: 14px;
+  width: 0;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+.pro_card .add_cart .link:hover ion-icon {
+  width: 15px;
+  margin-right: 4px;
+}
+
+.pro_card:hover .inner_card .add_cart span {
+  top: 100%;
+  transition: 0.2s ease-in-out;
+}
+.pro_card:hover .inner_card .add_cart .link {
+  top: 0;
+  transition: 0.2s ease-in-out;
+}

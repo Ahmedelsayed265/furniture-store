@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 import "./home.css";
 import EskilMP4 from "./../assest/EskilMP4.mp4";
 import smStar from "./../assest/smStar.png";
@@ -17,7 +18,7 @@ class HomeComp extends Component {
     return (
       <React.Fragment>
         <div className="row header_content">
-          <div className="col-4">
+          <div className="col-4 up_1">
             <div className="sitetitle">
               <div className="head">
                 <h1>
@@ -62,7 +63,7 @@ class HomeComp extends Component {
               </div>
             </div>
           </div>
-          <div className="col-5 p-0 vid_entire">
+          <div className="col-5 up_1 p-0 vid_entire">
             <div className="sm-caption">
               <div className="caption">
                 <p>10% discount for registered users</p>
@@ -71,7 +72,7 @@ class HomeComp extends Component {
             </div>
             <video loop muted autoPlay playsInline src={EskilMP4} />
           </div>
-          <div className="col-3  p-0 ">
+          <div className="col-3 up_1 p-0 ">
             <div className="last_container d-flex flex-column">
               <img src={SMChair} alt="chair" />
               <p>

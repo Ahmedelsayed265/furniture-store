@@ -2,9 +2,7 @@
   height: calc(100vh - 50px);
   border-bottom: 1px solid #cccccc;
 }
-.header_content .col-4,
-.col-5,
-.col-3 {
+.header_content .up_1 {
   height: calc(100vh - 100px);
   padding: 67px 0 0 !important;
 }
