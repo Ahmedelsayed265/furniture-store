@@ -16,6 +16,10 @@ import team1 from "./../assest/team1.jpg";
 import team2 from "./../assest/team2.jpg";
 import team3 from "./../assest/team3.jpg";
 import team4 from "./../assest/team4.jpg";
+import blog1 from "./../assest/blog1.jpg";
+import blog2 from "./../assest/blog2.jpg";
+import blog3 from "./../assest/blog3.jpg";
+import blog4 from "./../assest/blog4.jpg";
 
 const HomeComp = (props) => {
   return (
@@ -172,12 +176,79 @@ const HomeComp = (props) => {
             <span></span>
           </div>
         </div>
-        <div className="col-3">
-        
+        <div className="col-3 blog_card">
+          <div className="inner_card">
+            <div className="img_wrapper">
+              <img src={blog1} alt="blog1" />
+            </div>
+            <div className="publisher">
+              <span>ADMIN</span>
+              <span>SEPTEMBER 9, 2021</span>
+            </div>
+            <h4>
+              ESKIL IS PROUD TO STOCK ALL BRANDS AT ONE SITE, EVERY THING
+              TOGETHER
+            </h4>
+            <p>
+              Take all negative words out of your mental dictionary and focus on
+              the solutions…
+            </p>
+          </div>
         </div>
-        <div className="col-3"></div>
-        <div className="col-3"></div>
-        <div className="col-3"></div>
+        <div className="col-3 blog_card">
+          <div className="inner_card">
+            <div className="img_wrapper">
+              <img src={blog2} alt="blog2" />
+            </div>
+            <div className="publisher">
+              <span>ADMIN</span>
+              <span>DECEMBER 4, 2021</span>
+            </div>
+            <h4>
+              HOW TO ACHIEVE NATURAL SHADES IN YOUR SWEET HOME, EASY PRETTY TIPS
+            </h4>
+            <p>
+              The main compont of a healthy environment for self esteem is that
+              it needs…
+            </p>
+          </div>
+        </div>
+        <div className="col-3 blog_card">
+          <div className="inner_card">
+            <div className="img_wrapper">
+              <img src={blog3} alt="blog3" />
+            </div>
+            <div className="publisher">
+              <span>ADMIN</span>
+              <span>DECEMBER 9, 2021</span>
+            </div>
+            <h4>
+              TIPS AND TRICKS: HOW TO ACHIEVE NATURAL SHADES IN YOUR SWEET HOME
+            </h4>
+            <p>
+              Never ever think of giving up. Winners never quit and quitters
+              never win. Take…
+            </p>
+          </div>
+        </div>
+        <div className="col-3 blog_card">
+          <div className="inner_card">
+            <div className="img_wrapper">
+              <img src={blog4} alt="blog4" />
+            </div>
+            <div className="publisher">
+              <span>ADMIN</span>
+              <span>MAY 9, 2022</span>
+            </div>
+            <h4>
+              HANDMADE PIECES THAT TOOK TIME TO MAKE RETRO-NEW ARTISTIC DESIGN
+            </h4>
+            <p>
+              We all intend to plan ahead, but too often let the day-to-day
+              minutia get…
+            </p>
+          </div>
+        </div>
       </div>
     </React.Fragment>
   );
