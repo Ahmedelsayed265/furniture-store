@@ -164,6 +164,21 @@ const HomeComp = (props) => {
           </div>
         </div>
       </div>
+      <div className="row news">
+        <div className="col-12 mb-5">
+          <p className="text-center mb-1 mt-5">OUR BLOG</p>
+          <h2 className="text-center">LATEST NEWS</h2>
+          <div className="line">
+            <span></span>
+          </div>
+        </div>
+        <div className="col-3">
+        
+        </div>
+        <div className="col-3"></div>
+        <div className="col-3"></div>
+        <div className="col-3"></div>
+      </div>
     </React.Fragment>
   );
 };
