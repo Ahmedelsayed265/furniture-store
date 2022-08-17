@@ -120,7 +120,11 @@ const HomeComp = (props) => {
           </div>
         </div>
         {props.products.map((product) => (
-          <FeaturedComponent product={product} key={product.id} />
+          <FeaturedComponent
+            product={product}
+            key={product.id}
+            onCartChange={props.onCartChange}
+          />
         ))}
       </div>
       <div className="row team">

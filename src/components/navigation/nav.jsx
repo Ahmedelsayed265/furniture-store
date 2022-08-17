@@ -12,6 +12,11 @@ class Nav extends Component {
     activeClass = !activeClass;
     this.setState({ isActive: activeClass });
   };
+  navReduce() {
+    return this.props.products
+      .reduce((acc, product) => acc + product.count * product.price, 0)
+      .toFixed(2);
+  }
   render() {
     return (
       <React.Fragment>
@@ -91,7 +96,7 @@ class Nav extends Component {
                 <li>
                   <Link to="/cart">
                     <ion-icon name="bag-outline"></ion-icon>
-                    Cart $0.00
+                    Cart ${this.navReduce()}
                   </Link>
                 </li>
               </ul>

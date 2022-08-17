@@ -52,6 +52,9 @@
   opacity: 0;
   cursor: pointer;
 }
+.pro_card .add_cart .link b{
+  font-weight: 400;
+}
 .pro_card .add_cart .link ion-icon {
   margin-right: 0;
   font-size: 14px;
