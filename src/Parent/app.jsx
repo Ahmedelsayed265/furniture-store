@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import axios from "axios";
 import Nav from "./../components/navigation/nav";
 import HomeComp from "./../components/main/home";
+import Footer from './../components/footer/foot';
 import "./app.css";
 
 class App extends Component {
@@ -13,11 +14,11 @@ class App extends Component {
     let { data } = await axios.get("http://localhost:3000/products");
     this.setState({ products: data });
   }
-  inCartChange = (i) => {
+  inCartAdd = (i) => {
     let products = [...this.state.products];
     let index = products.indexOf(i);
     products[index] = { ...products[index] };
-    products[index].inCart = !products[index].inCart;
+    products[index].inCart = true;
     products[index].count = 1;
     this.setState({ products });
   };
@@ -33,12 +34,13 @@ class App extends Component {
                 <HomeComp
                   products={this.state.products.filter((p) => p.featured)}
                   {...props}
-                  onCartChange={this.inCartChange}
+                  onCartChange={this.inCartAdd}
                 />
               )}
             />
           </Switch>
         </div>
+        <Footer/>
       </React.Fragment>
     );
   }

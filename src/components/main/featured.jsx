@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./featured.css";
+import { Link } from "react-router-dom";
 class FeaturedComponent extends Component {
   ifInCart() {
     if (!this.props.product.inCart) {
@@ -9,7 +10,11 @@ class FeaturedComponent extends Component {
         </b>
       );
     } else {
-      return <b>View Cart</b>;
+      return (
+        <b>
+          <Link to="/cart">VIEW CART</Link>
+        </b>
+      );
     }
   }
   render() {

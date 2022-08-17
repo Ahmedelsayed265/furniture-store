@@ -43,25 +43,25 @@ const HomeComp = (props) => {
             <div className="quick_access">
               <ul>
                 <li>
-                  <Link to="/cart">
+                  <Link to="/shop">
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                     chair
                   </Link>
                 </li>
                 <li>
-                  <Link to="/cart">
+                  <Link to="/shop">
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                     home decor
                   </Link>
                 </li>
                 <li>
-                  <Link to="/cart">
+                  <Link to="/shop">
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                     tabels
                   </Link>
                 </li>
                 <li>
-                  <Link to="/cart">
+                  <Link to="/shop">
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                     lighting
                   </Link>
@@ -252,6 +252,25 @@ const HomeComp = (props) => {
               minutia get…
             </p>
           </div>
+        </div>
+      </div>
+      <div className="row sub">
+        <div className="sub_wrap">
+          <h3>
+            Subscribe to our newsletter and receive the latest product news,
+            stories, invitations to exclusive design events and much, much more.
+          </h3>
+          <form className="field">
+            <input placeholder="Enter Email Address" type="email" />
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+          <p>
+            BY SUBSCRIBING, YOU ACCEPT OUR{" "}
+            <Link to="/terms-condition">
+              PRIVACY POLCY{" "}
+              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+            </Link>
+          </p>
         </div>
       </div>
     </React.Fragment>
