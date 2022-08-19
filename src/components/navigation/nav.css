@@ -39,6 +39,7 @@
   height: 0;
   overflow: hidden;
   transition: 0.3s ease-in-out;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .right_head div .down_drop.active {
   height: 114px;
@@ -87,7 +88,8 @@
 .left_sup_nav ul li a::after {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   content: "";
   height: 1px;
   background-color: #000;
@@ -96,6 +98,9 @@
 .left_sup_nav ul li a.active::after {
   width: 100%;
   transition: 0.2s;
+}
+nav {
+  position: relative;
 }
 .right_sup_nav ul {
   display: flex;
@@ -108,6 +113,15 @@
   font-size: 16px;
 }
 .right_sup_nav ul li a i,
+ion-icon {
+  margin-right: 5px;
+}
+.right_sup_nav ul li {
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
+.right_sup_nav ul li i,
 ion-icon {
   margin-right: 5px;
 }

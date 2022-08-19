@@ -3,14 +3,26 @@ import { NavLink, Link } from "react-router-dom";
 import "./nav.css";
 import smStar from "./../assest/smStar.png";
 import EskilLogo from "./../assest/EskilLogo.png";
+import MINCART from "./miniCart";
 class Nav extends Component {
   state = {
     isActive: false,
+    isCartActive: false,
   };
-  toggle = () => {
+  toggleLanguages = () => {
     let activeClass = this.state.isActive;
     activeClass = !activeClass;
     this.setState({ isActive: activeClass });
+  };
+  openCart = () => {
+    let activeClass = this.state.isCartActive;
+    activeClass = true;
+    this.setState({ isCartActive: activeClass });
+  };
+  closeCart = () => {
+    let activeClass = this.state.isCartActive;
+    activeClass = false;
+    this.setState({ isCartActive: activeClass });
   };
   navReduce() {
     return this.props.products
@@ -37,7 +49,7 @@ class Nav extends Component {
                 <Link to="#">
                   <i className="fab fa-twitter"></i>
                 </Link>
-                <span onClick={this.toggle}>
+                <span onClick={this.toggleLanguages}>
                   English <i className="fas fa-angle-down"></i>
                 </span>
                 <div
@@ -93,14 +105,13 @@ class Nav extends Component {
                     <i className="far fa-heart"></i>Wishlist
                   </Link>
                 </li>
-                <li>
-                  <Link to="/cart">
-                    <ion-icon name="bag-outline"></ion-icon>
-                    Cart ${this.navReduce()}
-                  </Link>
+                <li onClick={this.openCart}>
+                  <ion-icon name="bag-outline"></ion-icon>
+                  Cart ${this.navReduce()}
                 </li>
               </ul>
             </div>
+            <MINCART closeCart={this.closeCart} isCartActive={this.state.isCartActive} />
           </nav>
         </div>
       </React.Fragment>
