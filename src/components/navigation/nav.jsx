@@ -111,7 +111,12 @@ class Nav extends Component {
                 </li>
               </ul>
             </div>
-            <MINCART closeCart={this.closeCart} isCartActive={this.state.isCartActive} />
+            <MINCART
+              closeCart={this.closeCart}
+              isCartActive={this.state.isCartActive}
+              products={this.props.products}
+              navReduce={this.navReduce()}
+            />
           </nav>
         </div>
       </React.Fragment>

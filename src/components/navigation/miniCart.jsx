@@ -1,7 +1,7 @@
 import React from "react";
 import "./miniCart.css";
 import { Link } from "react-router-dom";
-import imgF5 from "./../assest/imgF5.png";
+import PRO from "./pro";
 const MINCART = (props) => {
   return (
     <div className={`mini_cart ${props.isCartActive ? "active" : ""}`}>
@@ -13,26 +13,14 @@ const MINCART = (props) => {
           <h3>Shopping Cart</h3>
         </div>
         <div className="products">
-          <div className="product">
-            <div className="pro_img">
-              <img src={imgF5} alt="imgf5" />
-            </div>
-            <div className="pro_detail">
-              <h6>Vedio Chair, Gunnared Green, solid birch frame & lacquer</h6>
-              <p>
-                Count: <span>1</span>
-              </p>
-              <p>$250.00</p>
-            </div>
-            <div className="del_pro">
-              <ion-icon name="close-outline"></ion-icon>
-            </div>
-          </div>
+          {props.products.map((product) => (
+            <PRO product={product} key={product.id} />
+          ))}
         </div>
         <div className="Total">
           <div className="total_inner">
             <h4>Total</h4>
-            <span>$0.00</span>
+            <span>${props.navReduce}</span>
           </div>
         </div>
       </div>

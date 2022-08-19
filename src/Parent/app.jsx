@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import axios from "axios";
 import Nav from "./../components/navigation/nav";
 import HomeComp from "./../components/main/home";
-import Footer from './../components/footer/foot';
+import Footer from "./../components/footer/foot";
 import "./app.css";
 
 class App extends Component {
@@ -25,7 +25,9 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Nav products={this.state.products} />
+        <Nav
+          products={this.state.products.filter((p) => p.inCart && p.count > 0)}
+        />
         <div className="main_entire">
           <Switch>
             <Route
@@ -40,7 +42,7 @@ class App extends Component {
             />
           </Switch>
         </div>
-        <Footer/>
+        <Footer />
       </React.Fragment>
     );
   }

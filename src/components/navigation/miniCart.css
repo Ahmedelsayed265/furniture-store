@@ -10,6 +10,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  z-index: 999999;
 }
 .mini_cart.active {
   right: 0;
@@ -30,7 +31,6 @@
 .mini_cart .cart_container {
   width: 100%;
   height: calc(70vh + 25px);
-  padding: 20px 0 0;
 }
 .mini_cart .Route_links {
   width: 100%;
@@ -68,7 +68,7 @@
 }
 .mini_cart .cart_container .head {
   width: 100%;
-  height: 40px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,42 +104,4 @@
   color: #000;
   font-size: 20px;
 }
-.mini_cart .cart_container .products .product {
-  width: 100%;
-  height: calc(23.33vh - 31.67px);
-  display: flex;
-}
-.mini_cart .cart_container .products .product .pro_img {
-  width: 30%;
-}
-.mini_cart .cart_container .products .product img {
-  max-width: 100%;
-}
-.mini_cart .cart_container .products .product .pro_detail {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  padding: 18px 5px;
-}
-.pro_detail p {
-  margin: 0;
-  font-size: 14px;
-}
-.mini_cart .cart_container .products .product .del_pro {
-  width: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.mini_cart .cart_container .products .product .del_pro ion-icon {
-  font-size: 22px;
-  cursor: pointer;
-  color: #000;
-  border: 1px solid #787878;
-  border-radius: 50%;
-  padding: 2px;
-}
-.mini_cart .cart_container .products .product .del_pro ion-icon:hover {
-  transform: rotate(90deg);
-  transition: 0.3s ease-in-out;
-}
+

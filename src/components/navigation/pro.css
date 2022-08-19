@@ -1,0 +1,43 @@
+.product {
+  width: 100%;
+  height: calc(23.33vh - 31.67px);
+  display: flex;
+}
+.product .pro_img {
+  width: 30%;
+}
+.product img {
+  max-width: 100%;
+}
+.product .pro_detail {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 10px;
+}
+.pro_detail h6 {
+  font-size: 14px;
+}
+.pro_detail p {
+  margin: 0;
+  font-size: 14px;
+}
+.product .del_pro {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product .del_pro ion-icon {
+  font-size: 22px;
+  cursor: pointer;
+  color: #000;
+  border: 1px solid #787878;
+  border-radius: 50%;
+  padding: 2px;
+  margin: 0;
+}
+.product .del_pro ion-icon:hover {
+  transform: rotate(90deg);
+  transition: 0.3s ease-in-out;
+}
