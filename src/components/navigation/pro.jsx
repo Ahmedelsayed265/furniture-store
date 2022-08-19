@@ -14,7 +14,10 @@ const PRO = (props) => {
         <p>{props.product.price}</p>
       </div>
       <div className="del_pro">
-        <ion-icon name="close-outline"></ion-icon>
+        <ion-icon
+          onClick={() => props.onDelete(props.product)}
+          name="close-outline"
+        ></ion-icon>
       </div>
     </div>
   );

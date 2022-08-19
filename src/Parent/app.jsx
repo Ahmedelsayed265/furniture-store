@@ -22,11 +22,20 @@ class App extends Component {
     products[index].count = 1;
     this.setState({ products });
   };
+  inCartDelete = (i) => {
+    let products = [...this.state.products];
+    let index = products.indexOf(i);
+    products[index] = { ...products[index] };
+    products[index].inCart = false;
+    products[index].count = 0;
+    this.setState({ products });
+  };
   render() {
     return (
       <React.Fragment>
         <Nav
           products={this.state.products.filter((p) => p.inCart && p.count > 0)}
+          onDelete={this.inCartDelete}
         />
         <div className="main_entire">
           <Switch>

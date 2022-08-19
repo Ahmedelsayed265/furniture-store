@@ -116,6 +116,7 @@ class Nav extends Component {
               isCartActive={this.state.isCartActive}
               products={this.props.products}
               navReduce={this.navReduce()}
+              onDelete={this.props.onDelete}
             />
           </nav>
         </div>

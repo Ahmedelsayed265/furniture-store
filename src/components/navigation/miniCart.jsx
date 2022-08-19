@@ -14,7 +14,7 @@ const MINCART = (props) => {
         </div>
         <div className="products">
           {props.products.map((product) => (
-            <PRO product={product} key={product.id} />
+            <PRO product={product} key={product.id} onDelete={props.onDelete} />
           ))}
         </div>
         <div className="Total">
