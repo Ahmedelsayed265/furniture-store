@@ -138,6 +138,19 @@ const HomeComp = (props) => {
         <div className="col-3 Team_card">
           <div className="team_img">
             <img src={team4} alt="team1" />
+            <div className="social">
+              <div className="soc_container">
+                <Link to="#">
+                  <i className="fab fa-linkedin-in"></i>
+                </Link>
+                <Link to="#">
+                  <i className="fab fa-instagram"></i>
+                </Link>
+                <Link to="#">
+                  <i className="fab fa-twitter"></i>
+                </Link>
+              </div>
+            </div>
           </div>
           <div className="job_title">
             <h3>Nicolette Ritonni</h3>
@@ -147,6 +160,19 @@ const HomeComp = (props) => {
         <div className="col-3 Team_card">
           <div className="team_img">
             <img src={team2} alt="team1" />
+            <div className="social">
+              <div className="soc_container">
+                <Link to="#">
+                  <i className="fab fa-linkedin-in"></i>
+                </Link>
+                <Link to="#">
+                  <i className="fab fa-instagram"></i>
+                </Link>
+                <Link to="#">
+                  <i className="fab fa-twitter"></i>
+                </Link>
+              </div>
+            </div>
           </div>
           <div className="job_title">
             <h3>Nicolas Waldau</h3>
@@ -156,6 +182,19 @@ const HomeComp = (props) => {
         <div className="col-3 Team_card">
           <div className="team_img">
             <img src={team3} alt="team1" />
+            <div className="social">
+              <div className="soc_container">
+                <Link to="#">
+                  <i className="fab fa-linkedin-in"></i>
+                </Link>
+                <Link to="#">
+                  <i className="fab fa-instagram"></i>
+                </Link>
+                <Link to="#">
+                  <i className="fab fa-twitter"></i>
+                </Link>
+              </div>
+            </div>
           </div>
           <div className="job_title">
             <h3>Juliette Massé</h3>
@@ -165,6 +204,19 @@ const HomeComp = (props) => {
         <div className="col-3 Team_card">
           <div className="team_img">
             <img src={team1} alt="team1" />
+            <div className="social">
+              <div className="soc_container">
+                <Link to="#">
+                  <i className="fab fa-linkedin-in"></i>
+                </Link>
+                <Link to="#">
+                  <i className="fab fa-instagram"></i>
+                </Link>
+                <Link to="#">
+                  <i className="fab fa-twitter"></i>
+                </Link>
+              </div>
+            </div>
           </div>
           <div className="job_title">
             <h3>Yeung Ngai</h3>
@@ -195,7 +247,7 @@ const HomeComp = (props) => {
             </h4>
             <p>
               Take all negative words out of your mental dictionary and focus on
-              the solutions…
+              the solutions… <Link to="#">Read more</Link>
             </p>
           </div>
         </div>
@@ -213,7 +265,7 @@ const HomeComp = (props) => {
             </h4>
             <p>
               The main compont of a healthy environment for self esteem is that
-              it needs…
+              it needs… <Link to="#">Read more</Link>
             </p>
           </div>
         </div>
@@ -231,7 +283,7 @@ const HomeComp = (props) => {
             </h4>
             <p>
               Never ever think of giving up. Winners never quit and quitters
-              never win. Take…
+              never win. Take… <Link to="#">Read more</Link>
             </p>
           </div>
         </div>
@@ -249,7 +301,7 @@ const HomeComp = (props) => {
             </h4>
             <p>
               We all intend to plan ahead, but too often let the day-to-day
-              minutia get…
+              minutia get… <Link to="#">Read more</Link>
             </p>
           </div>
         </div>

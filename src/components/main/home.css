@@ -178,6 +178,44 @@
 }
 .team .team_img {
   padding: 10px 10px 10px 0;
+  position: relative;
+}
+.team .team_img .social {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 100%;
+}
+.team .team_img .social .soc_container {
+  width: 0;
+  overflow: hidden;
+  height: 100%;
+  margin-right: 0;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.team .Team_card:hover .social .soc_container {
+  width: 100%;
+  transition: 0.5s ease-in-out;
+}
+.team .team_img .social .soc_container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team .team_img .social .soc_container i {
+  margin: 0 auto;
+  color: #000;
+  background: #e6e4e4;
+  font-size: 18px;
+  padding: 6px;
+  border-radius: 50%;
+}
+.team .team_img .social .soc_container i:first-child {
+  margin-top: 20px;
 }
 .team .team_img img {
   max-width: 100%;
@@ -249,6 +287,10 @@
   font-weight: 400;
   margin-top: 10px;
   margin-bottom: 0;
+}
+.news .blog_card .inner_card p a {
+  color: #000;
+  font-weight: 500;
 }
 .news .blog_card:hover .inner_card .img_wrapper img {
   transform: scale(1.03);
