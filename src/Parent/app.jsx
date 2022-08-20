@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import axios from "axios";
+import "./app.css";
 import Nav from "./../components/navigation/nav";
 import HomeComp from "./../components/main/home";
+import About from "./../components/about/about";
 import Footer from "./../components/footer/foot";
-import "./app.css";
 
 class App extends Component {
   state = {
@@ -49,6 +50,7 @@ class App extends Component {
                 />
               )}
             />
+            <Route path="/about" component={About} />
           </Switch>
         </div>
         <Footer />

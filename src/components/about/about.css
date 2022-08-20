@@ -1,0 +1,86 @@
+.go_back {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+.go_back a {
+  color: #000;
+  margin-right: 5px;
+}
+.go_back a:hover {
+  text-decoration: underline;
+}
+.about .about_store {
+  height: calc(100vh - 180px);
+  display: flex;
+  padding: 40px 0;
+  border-bottom: 1px solid #cccccc;
+}
+.about .about_store .right_wrapper {
+  width: 50%;
+}
+.about .about_store .right_wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.about .about_store .left_wrapper {
+  width: 50%;
+  padding-right: 120px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.about .about_store .left_wrapper .ab_head h1 {
+  color: #000;
+  font-weight: 400;
+}
+.about .about_store .left_wrapper .ab_head p {
+  font-size: 21px;
+  line-height: 28px;
+  margin-top: 26px;
+}
+.career {
+  margin-top: 20px;
+}
+.career a {
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+.serv_outer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0;
+}
+.serv_inner {
+  width: 58%;
+}
+.serv_inner h3 {
+  text-align: center;
+  color: #000;
+}
+.slider {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding-top: 70px;
+}
+.slider .slide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  cursor: pointer;
+}
+.slider .slide img{
+  max-width: 70px;
+}
+.slider .slide h6{
+  text-align: center;
+}
