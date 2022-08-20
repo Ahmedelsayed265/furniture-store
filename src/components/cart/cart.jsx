@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import cart from "./../assest/cart.png";
 import "./car.css";
 class CART extends Component {
+  cartReduce() {
+    return this.props.products
+      .reduce((acc, product) => acc + product.count * product.price, 0)
+      .toFixed(2);
+  }
   ifCartEmpty() {
     if (this.props.products.length === 0) {
       return (
@@ -21,6 +26,7 @@ class CART extends Component {
                 <th scope="col">Name</th>
                 <th scope="col">Price</th>
                 <th scope="col">Count</th>
+                <th scope="col">SubTotal</th>
                 <th scope="col"></th>
               </tr>
             </thead>
@@ -31,7 +37,7 @@ class CART extends Component {
                     <img src={product.url} alt={`img${product.id}`} />
                   </th>
                   <td className="name">{product.name}</td>
-                  <td>${(product.price * product.count).toFixed(2)}</td>
+                  <td>${product.price}</td>
                   <td className="count_contaner">
                     <div className="count">
                       <button
@@ -51,6 +57,7 @@ class CART extends Component {
                       </button>
                     </div>
                   </td>
+                  <td>${(product.price * product.count).toFixed(2)}</td>
                   <td>
                     <i
                       onClick={() => {
@@ -63,6 +70,12 @@ class CART extends Component {
               ))}
             </tbody>
           </table>
+          <div className="total">
+            <div className="total_sub">
+              <h6>CART TOTAL</h6>
+              <span>${this.cartReduce()}</span>
+            </div>
+          </div>
           <div className="checkout">
             <Link to="/checkout">PROCEED TO CHECKOUT</Link>
           </div>

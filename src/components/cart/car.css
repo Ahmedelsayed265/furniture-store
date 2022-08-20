@@ -27,6 +27,12 @@ tbody th,
 tbody td {
   text-align: center;
 }
+.table tbody tr:not(:last-child) {
+  border-bottom: 1px solid #cccccc !important;
+}
+.table thead tr {
+  border-bottom: 1px solid #cccccc !important;
+}
 .table tbody .name {
   width: 260px !important;
   text-align: start;
@@ -46,7 +52,7 @@ tbody td {
   outline: none;
   border: none;
 }
-.table tbody .count span{ 
+.table tbody .count span {
   width: 25px;
   display: flex;
   align-items: center;
@@ -54,24 +60,38 @@ tbody td {
   border-right: 1px solid #000;
   border-left: 1px solid #000;
 }
-.table tbody .count_contaner{
+.table tbody .count_contaner {
   display: flex;
   justify-content: center;
+  border-bottom: 0 !important;
 }
-.table tbody td i{
+.table tbody td i {
   cursor: pointer;
 }
-.fill_cart .checkout{
+.fill_cart .checkout {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
 }
-.fill_cart .checkout a{
+.fill_cart .checkout a {
   color: #fff;
   background: #000;
   padding: 8px 16px;
   letter-spacing: 1px;
   font-size: 16px;
+}
+.fill_cart .total {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  border-bottom: 1px solid #cccccc;
+}
+.fill_cart .total .total_sub {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

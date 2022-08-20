@@ -11,7 +11,7 @@ const PRO = (props) => {
         <p>
           Count: <span>{props.product.count}</span>
         </p>
-        <p>{props.product.price}</p>
+        <p>{(props.product.price * props.product.count).toFixed(2)}</p>
       </div>
       <div className="del_pro">
         <i
