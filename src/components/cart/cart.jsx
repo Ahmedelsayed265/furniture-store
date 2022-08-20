@@ -52,12 +52,20 @@ class CART extends Component {
                     </div>
                   </td>
                   <td>
-                    <i className="fa-solid fa-trash"></i>
+                    <i
+                      onClick={() => {
+                        this.props.onDelete(product);
+                      }}
+                      className="fa-solid fa-trash"
+                    ></i>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
+          <div className="checkout">
+            <Link to="/checkout">PROCEED TO CHECKOUT</Link>
+          </div>
         </div>
       );
     }

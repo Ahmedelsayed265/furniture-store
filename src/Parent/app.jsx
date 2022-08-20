@@ -70,11 +70,13 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route
               path="/cart"
-              render={() => (
+              render={(props) => (
                 <CART
                   products={this.state.products.filter((p) => p.inCart)}
                   onIncrement={this.increment}
                   onDecrement={this.decrement}
+                  onDelete={this.inCartDelete}
+                  {...props}
                 />
               )}
             />
