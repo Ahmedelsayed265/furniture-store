@@ -7,6 +7,7 @@ import material2 from "./../assest/material2.png";
 import material3 from "./../assest/material3.png";
 import material4 from "./../assest/material4.png";
 import material5 from "./../assest/material5.png";
+import SWIP from "./swiper";
 const About = () => {
   return (
     <React.Fragment>
@@ -40,6 +41,20 @@ const About = () => {
           </div>
           <div className="right_wrapper">
             <img src={About1} alt="About1" />
+          </div>
+        </div>
+        <div className="new">
+          <div className="left_news">
+            <h4>Home Decor</h4>
+            <h5>Testimonials</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, se do
+              eiusm odtemporw incididunt ut labore et dolorea gna aliqua. Ut
+              enim ad min imveniam, quis nostrudati
+            </p>
+          </div>
+          <div className="right_news">
+            <SWIP />
           </div>
         </div>
         <div className="serv_outer">

@@ -1,0 +1,37 @@
+.swiper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.client_img {
+  width: 30%;
+  border-radius: 50%;
+  border: #ccc;
+}
+.client_img img{
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.client h6{
+  margin-top: 25px;
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+}
+.client .review{
+  width: 100%;
+  margin-top: 30px;
+}
+.client .review p{
+  text-align: center;
+  color: #000;
+  font-style: italic;
+}
