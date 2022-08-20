@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 .client {
   width: 100%;
@@ -15,23 +16,50 @@
   border-radius: 50%;
   border: #ccc;
 }
-.client_img img{
+.client_img img {
   max-width: 100%;
   overflow: hidden;
   border-radius: 50%;
 }
-.client h6{
+.client h6 {
   margin-top: 25px;
   font-size: 20px;
   color: #000;
   font-weight: 500;
 }
-.client .review{
+.client .review {
   width: 100%;
   margin-top: 30px;
 }
-.client .review p{
+.client .review p {
   text-align: center;
   color: #000;
   font-style: italic;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -2px !important;
+}
+.swiper-pagination-bullet {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: relative;
+  background: #787878;
+  margin-left: 15px !important;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #000;
+}
+.swiper-pagination-bullet::after{
+  position: absolute;
+  content: "";
+  top: -4px;
+  left: -4px;
+  border: 1px solid #000;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }

@@ -1,4 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import "swiper/css/pagination";
 import "swiper/css";
 import "./swiper.css";
 import test1 from "./../assest/test1.jpg";
@@ -9,9 +11,14 @@ const SWIP = () => {
     <Swiper
       spaceBetween={50}
       slidesPerView={1}
-      loop={true}
-      autoPlay={true}
-      autoPlayTimeout={3000}
+      autoplay={{
+        delay: 3000,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
     >
       <SwiperSlide>
         <div className="client">
