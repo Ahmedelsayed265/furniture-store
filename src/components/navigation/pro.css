@@ -28,16 +28,7 @@
   align-items: center;
   justify-content: center;
 }
-.product .del_pro ion-icon {
-  font-size: 22px;
+.product .del_pro i {
   cursor: pointer;
   color: #000;
-  border: 1px solid #787878;
-  border-radius: 50%;
-  padding: 2px;
-  margin: 0;
-}
-.product .del_pro ion-icon:hover {
-  transform: rotate(90deg);
-  transition: 0.3s ease-in-out;
 }

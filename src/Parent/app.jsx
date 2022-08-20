@@ -6,6 +6,7 @@ import Nav from "./../components/navigation/nav";
 import HomeComp from "./../components/main/home";
 import About from "./../components/about/about";
 import Footer from "./../components/footer/foot";
+import CART from "./../components/cart/cart";
 
 class App extends Component {
   state = {
@@ -31,6 +32,22 @@ class App extends Component {
     products[index].count = 0;
     this.setState({ products });
   };
+  increment = (i) => {
+    let products = [...this.state.products];
+    let index = products.indexOf(i);
+    products[index] = { ...products[index] };
+    products[index].count++;
+    this.setState({ products });
+  };
+  decrement = (i) => {
+    let products = [...this.state.products];
+    let index = products.indexOf(i);
+    products[index] = { ...products[index] };
+    if (products[index].count > 0) {
+      products[index].count--;
+    }
+    this.setState({ products });
+  };
   render() {
     return (
       <React.Fragment>
@@ -51,6 +68,16 @@ class App extends Component {
               )}
             />
             <Route path="/about" component={About} />
+            <Route
+              path="/cart"
+              render={() => (
+                <CART
+                  products={this.state.products.filter((p) => p.inCart)}
+                  onIncrement={this.increment}
+                  onDecrement={this.decrement}
+                />
+              )}
+            />
           </Switch>
         </div>
         <Footer />

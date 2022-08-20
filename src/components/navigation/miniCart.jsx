@@ -37,7 +37,7 @@ class MINCART extends Component {
           </div>
         </div>
         <div className="Route_links">
-          <Link className="black_Link" to="/cart">
+          <Link onClick={closeCart} className="black_Link" to="/cart">
             <ion-icon name="bag-outline"></ion-icon>
             <span> VIEW SHOPPING CART</span>
           </Link>

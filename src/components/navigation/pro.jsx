@@ -14,10 +14,10 @@ const PRO = (props) => {
         <p>{props.product.price}</p>
       </div>
       <div className="del_pro">
-        <ion-icon
+        <i
           onClick={() => props.onDelete(props.product)}
-          name="close-outline"
-        ></ion-icon>
+          className="fa-solid fa-trash"
+        ></i>
       </div>
     </div>
   );
