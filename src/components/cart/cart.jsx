@@ -45,7 +45,7 @@ class CART extends Component {
                           this.props.onDecrement(product);
                         }}
                       >
-                        -
+                      <i className="fa-solid fa-minus"></i>
                       </button>
                       <span> {product.count}</span>
                       <button
@@ -53,7 +53,7 @@ class CART extends Component {
                           this.props.onIncrement(product);
                         }}
                       >
-                        +
+                      <i className="fa-solid fa-plus"></i>
                       </button>
                     </div>
                   </td>
