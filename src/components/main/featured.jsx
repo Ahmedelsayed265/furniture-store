@@ -39,7 +39,7 @@ class FeaturedComponent extends Component {
               <p>{name}</p>
             </div>
             <div className="add_cart">
-              <span>{price}</span>
+              <span>${price}</span>
               <div className="link" onClick={() => onCartChange(product)}>
                 {this.ifInCart()}
               </div>

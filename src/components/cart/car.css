@@ -27,11 +27,11 @@ tbody th,
 tbody td {
   text-align: center;
 }
-.table tbody tr:not(:last-child) {
-  border-bottom: 1px solid #cccccc !important;
+.table tbody tr {
+  border-bottom: 1px solid #dcdcdc !important;
 }
 .table thead tr {
-  border-bottom: 1px solid #cccccc !important;
+  border-bottom: 1px solid #dcdcdc !important;
 }
 .table tbody .name {
   width: 260px !important;
