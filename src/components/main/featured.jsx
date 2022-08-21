@@ -17,8 +17,15 @@ class FeaturedComponent extends Component {
       );
     }
   }
+  heartCase() {
+    if (!this.props.product.wished) {
+      return "far fa-heart";
+    } else {
+      return "fa-solid fa-heart";
+    }
+  }
   render() {
-    const { product, onCartChange } = this.props;
+    const { product, onCartChange, onWishAdd } = this.props;
     const { url, name, price } = this.props.product;
     return (
       <React.Fragment>
@@ -31,7 +38,10 @@ class FeaturedComponent extends Component {
                   <i className="fas fa-eye"></i>
                 </span>
                 <span>
-                  <i className="far fa-heart"></i>
+                  <i
+                    onClick={() => onWishAdd(product)}
+                    className={this.heartCase()}
+                  ></i>
                 </span>
               </div>
             </div>

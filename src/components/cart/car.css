@@ -21,6 +21,7 @@
 .table thead th {
   padding-bottom: 20px !important;
   text-transform: uppercase;
+  font-weight: 400;
 }
 .table tbody td {
   padding-top: 30px;

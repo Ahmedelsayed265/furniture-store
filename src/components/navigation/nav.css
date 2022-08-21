@@ -108,9 +108,26 @@ nav {
   justify-content: center;
   gap: 44px;
 }
+.right_sup_nav ul li{
+  position: relative;
+}
 .right_sup_nav ul li a {
   color: #000;
   font-size: 16px;
+}
+.right_sup_nav ul li .count {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -3px;
+  left: -7px;
 }
 .right_sup_nav ul li a i,
 ion-icon {

@@ -124,6 +124,7 @@ const HomeComp = (props) => {
             product={product}
             key={product.id}
             onCartChange={props.onCartChange}
+            onWishAdd={props.onWishAdd}
           />
         ))}
       </div>

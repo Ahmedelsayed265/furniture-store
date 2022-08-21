@@ -102,10 +102,12 @@ class Nav extends Component {
                 </li>
                 <li>
                   <Link to="/wishlist">
-                    <i className="far fa-heart"></i>Wishlist
+                    <i className="far fa-heart"></i>Wishlist{" "}
+                    <span className="count">{this.props.wishCount}</span>
                   </Link>
                 </li>
                 <li onClick={this.openCart}>
+                <span className="count">{this.props.productsCount}</span>
                   <ion-icon name="bag-outline"></ion-icon>
                   Cart ${this.navReduce()}
                 </li>

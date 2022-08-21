@@ -55,6 +55,13 @@ class App extends Component {
     }
     this.setState({ products });
   };
+  inListAdd = (i) => {
+    let products = [...this.state.products];
+    let index = products.indexOf(i);
+    products[index] = { ...products[index] };
+    products[index].wished = !products[index].wished;
+    this.setState({ products });
+  };
   inListDelete = (i) => {
     let products = [...this.state.products];
     let index = products.indexOf(i);
@@ -67,7 +74,11 @@ class App extends Component {
       <React.Fragment>
         <Nav
           products={this.state.products.filter((p) => p.inCart && p.count > 0)}
+          productsCount={
+            this.state.products.filter((p) => p.inCart && p.count > 0).length
+          }
           onDelete={this.inCartDelete}
+          wishCount={this.state.products.filter((p) => p.wished).length}
         />
         <div className="main_entire">
           <Switch>
@@ -78,6 +89,7 @@ class App extends Component {
                   products={this.state.products.filter((p) => p.featured)}
                   {...props}
                   onCartChange={this.inCartAdd}
+                  onWishAdd={this.inListAdd}
                 />
               )}
             />
