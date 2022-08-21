@@ -20,9 +20,13 @@
 }
 .table thead th {
   padding-bottom: 20px !important;
+  text-transform: uppercase;
 }
 .table tbody td {
   padding-top: 34px;
+}
+.table tbody th {
+  padding-top: 26px;
 }
 .table tbody th img {
   max-width: 70px;
@@ -94,4 +98,9 @@ tbody td {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.fill_cart .checkout .total_sub h6,
+span {
+  color: #000;
+  font-size: 18px;
 }
