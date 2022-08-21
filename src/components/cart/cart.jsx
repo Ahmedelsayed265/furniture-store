@@ -70,13 +70,11 @@ class CART extends Component {
               ))}
             </tbody>
           </table>
-          <div className="total">
+          <div className="checkout">
             <div className="total_sub">
-              <h6>CART TOTAL</h6>
+              <h6>CART TOTAL:</h6>
               <span>${this.cartReduce()}</span>
             </div>
-          </div>
-          <div className="checkout">
             <Link to="/checkout">PROCEED TO CHECKOUT</Link>
           </div>
         </div>

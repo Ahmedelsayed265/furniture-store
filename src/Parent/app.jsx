@@ -9,6 +9,7 @@ import Footer from "./../components/footer/foot";
 import CART from "./../components/cart/cart";
 import notFound from "./../components/error/error";
 import PORT from "./../components/portfolio/portfolio";
+import Wish from "./../components/wishlist/wishlist";
 
 class App extends Component {
   state = {
@@ -78,6 +79,17 @@ class App extends Component {
               path="/portfolio"
               render={(props) => (
                 <PORT projects={this.state.projects} {...props} />
+              )}
+            />
+            <Route
+              path="/wishlist"
+              render={(props) => (
+                <Wish
+                  products={this.state.products.filter(
+                    (product) => product.wished
+                  )}
+                  {...props}
+                />
               )}
             />
             <Route

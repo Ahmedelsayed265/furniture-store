@@ -18,6 +18,12 @@
   color: #000;
   margin-bottom: 50px;
 }
+.table thead th {
+  padding-bottom: 20px !important;
+}
+.table tbody td {
+  padding-top: 34px;
+}
 .table tbody th img {
   max-width: 70px;
   mix-blend-mode: multiply;
@@ -72,8 +78,9 @@ tbody td {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 100px;
+  padding-left: 100px;
 }
 .fill_cart .checkout a {
   color: #fff;
@@ -82,15 +89,8 @@ tbody td {
   letter-spacing: 1px;
   font-size: 16px;
 }
-.fill_cart .total {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 100px;
-  border-bottom: 1px solid #cccccc;
-}
-.fill_cart .total .total_sub {
-  width: 60%;
+.fill_cart .checkout .total_sub {
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: space-between;
