@@ -1,0 +1,30 @@
+.error_container {
+  width: 100%;
+  height: calc(100vh - 130px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.error_container img {
+  mix-blend-mode: multiply;
+}
+.error_container h2 {
+  font-size: 42px;
+  font-weight: 400;
+  color: #000;
+}
+.error_container p {
+  max-width: 45%;
+  font-size: 21px;
+  color: #000;
+  text-align: center;
+  margin-top: 25px;
+}
+.error_container a {
+  color: #000;
+  font-weight: 500;
+}
+.error_container a:hover {
+  text-decoration: underline;
+}

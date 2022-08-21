@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import axios from "axios";
 import "./app.css";
 import Nav from "./../components/navigation/nav";
@@ -7,6 +7,7 @@ import HomeComp from "./../components/main/home";
 import About from "./../components/about/about";
 import Footer from "./../components/footer/foot";
 import CART from "./../components/cart/cart";
+import notFound from "./../components/error/error";
 
 class App extends Component {
   state = {
@@ -80,6 +81,8 @@ class App extends Component {
                 />
               )}
             />
+            <Route path="/ERROR404" component={notFound} />
+            <Redirect to="/ERROR404" />
           </Switch>
         </div>
         <Footer />
