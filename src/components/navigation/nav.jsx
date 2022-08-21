@@ -83,7 +83,7 @@ class Nav extends Component {
                   <NavLink to="/about">ABOUT</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/gallery">Gallery</NavLink>
+                  <NavLink to="/portfolio">PORTFOLIO</NavLink>
                 </li>
                 <li>
                   <NavLink to="/shop">SHOP</NavLink>

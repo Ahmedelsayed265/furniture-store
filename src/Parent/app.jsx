@@ -8,14 +8,19 @@ import About from "./../components/about/about";
 import Footer from "./../components/footer/foot";
 import CART from "./../components/cart/cart";
 import notFound from "./../components/error/error";
+import PORT from "./../components/portfolio/portfolio";
 
 class App extends Component {
   state = {
     products: [],
+    projects: [],
   };
   async componentDidMount() {
     let { data } = await axios.get("http://localhost:3000/products");
-    this.setState({ products: data });
+    let products = data.filter((pro) => pro.category !== "projects");
+    this.setState({ products });
+    let projects = data.filter((pro) => pro.category === "projects");
+    this.setState({ projects });
   }
   inCartAdd = (i) => {
     let products = [...this.state.products];
@@ -69,6 +74,12 @@ class App extends Component {
               )}
             />
             <Route path="/about" component={About} />
+            <Route
+              path="/portfolio"
+              render={(props) => (
+                <PORT projects={this.state.projects} {...props} />
+              )}
+            />
             <Route
               path="/cart"
               render={(props) => (
