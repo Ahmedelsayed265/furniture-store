@@ -55,6 +55,13 @@ class App extends Component {
     }
     this.setState({ products });
   };
+  inListDelete = (i) => {
+    let products = [...this.state.products];
+    let index = products.indexOf(i);
+    products[index] = { ...products[index] };
+    products[index].wished = false;
+    this.setState({ products });
+  };
   render() {
     return (
       <React.Fragment>
@@ -85,9 +92,9 @@ class App extends Component {
               path="/wishlist"
               render={(props) => (
                 <Wish
-                  products={this.state.products.filter(
-                    (product) => product.wished
-                  )}
+                  products={this.state.products.filter((p) => p.wished)}
+                  onCartChange={this.inCartAdd}
+                  onXChange={this.inListDelete}
                   {...props}
                 />
               )}

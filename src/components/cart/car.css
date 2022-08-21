@@ -37,7 +37,7 @@ tbody th,
 tbody td {
   text-align: center;
 }
-.table tbody tr {
+.shopping_cart .table tbody tr {
   border-bottom: 1px solid #dcdcdc !important;
 }
 .table thead tr {
@@ -62,7 +62,7 @@ tbody td {
   outline: none;
   border: none;
 }
-.table tbody .count button i{
+.table tbody .count button i {
   font-size: 14px;
 }
 .table tbody .count span {
@@ -102,7 +102,7 @@ tbody td {
   align-items: center;
   justify-content: space-between;
 }
-.fill_cart .checkout .total_sub h6,
+.shopping_cart .fill_cart .checkout .total_sub h6,
 span {
   color: #000;
   font-size: 18px;

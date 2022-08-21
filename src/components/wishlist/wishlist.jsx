@@ -27,10 +27,31 @@ const Wish = (props) => {
                   <img src={p.url} alt={`img${p.id}`} />
                 </th>
                 <td className="name">{p.name}</td>
+                <td>{p.price}</td>
+                <td>IN STOCK</td>
+                <td>
+                  <i
+                    onClick={() => props.onCartChange(p)}
+                    className="fa-solid fa-cart-plus"
+                  ></i>
+                </td>
+                <td>
+                  <i
+                    onClick={() => props.onXChange(p)}
+                    className="fa-solid fa-trash"
+                  ></i>
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
+        {props.products.length === 0 ? (
+          <div className="empty">
+            <p>No products added to the wishlist</p>
+          </div>
+        ) : (
+          <React.Fragment></React.Fragment>
+        )}
       </section>
     </React.Fragment>
   );
