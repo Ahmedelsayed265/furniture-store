@@ -1,7 +1,47 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Joi from "joi-browser";
 class Login extends Component {
-  state = {};
+  state = {
+    userEmail: "",
+    password: "",
+    errors: {},
+  };
+  Schema = {
+    userEmail: Joi.string().email().required(),
+    password: Joi.string()
+      .min(8)
+      .max(25)
+      .regex(
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+        "password"
+      ),
+  };
+  validate = () => {
+    const errors = {};
+    const state = { ...this.state };
+    delete state.errors;
+    const res = Joi.validate(state, this.Schema, { abortEarly: false });
+    if (res.error === null) {
+      this.setState({ errors: {} });
+      return null;
+    }
+    for (const error of res.error.details) {
+      errors[error.path] = error.message;
+    }
+    this.setState({ errors });
+    return errors;
+  };
+  change = (e) => {
+    let state = { ...this.state };
+    state[e.currentTarget.name] = e.currentTarget.value;
+    this.setState(state);
+  };
+  submit = (e) => {
+    e.preventDefault();
+    const errors = this.validate();
+    if (errors) return;
+  };
   render() {
     return (
       <React.Fragment>
@@ -11,14 +51,26 @@ class Login extends Component {
         <section className="Login">
           <h3>MY ACCOUNT</h3>
           <div className="form_wrap">
-            <form>
+            <form onSubmit={this.submit}>
               <div className="form_field">
                 <label htmlFor="usermail">USERNAME OR EMAIL ADDRESS *</label>
-                <input type="email" id="usermail" />
+                <input
+                  name="userEmail"
+                  type="email"
+                  id="usermail"
+                  vlaue={this.state.userEmail}
+                  onChange={this.change}
+                />
               </div>
               <div className="form_field">
                 <label htmlFor="userpass">PASSWORD *</label>
-                <input type="password" id="userpass" />
+                <input
+                  type="password"
+                  name="password"
+                  id="userpass"
+                  value={this.state.password}
+                  onChange={this.change}
+                />
               </div>
               <div className="sign_link">
                 <span>
