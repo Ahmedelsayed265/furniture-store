@@ -1,17 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 import "./account.css";
-const MyAccount = (props) => {
-  return (
-    <React.Fragment>
-      <div className="go_back">
-        <Link to="/home">Home</Link> / My Account
-      </div>
-      <section className="Login">
-        <h3>MY ACCOUNT</h3>
-      </section>
-    </React.Fragment>
-  );
-};
+import Login from "./login";
+import Sign from "./signup";
+class MyAccount extends Component {
+  state = {};
+  render() {
+    return (
+      <React.Fragment>
+        <Switch>
+          <Route path="/account" component={Login} />
+          <Route path="/account/sign-up" component={Sign} />
+        </Switch>
+      </React.Fragment>
+    );
+  }
+}
 
 export default MyAccount;

@@ -101,7 +101,7 @@ class App extends Component {
                 <PORT projects={this.state.projects} {...props} />
               )}
             />
-            <Route path="/login" component={MyAccount} />
+            <Route path="/account" component={MyAccount} />
             <Route
               path="/wishlist"
               render={(props) => (

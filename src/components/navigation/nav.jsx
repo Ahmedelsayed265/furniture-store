@@ -96,7 +96,7 @@ class Nav extends Component {
             <div className="right_sup_nav d-flex align-items-center">
               <ul>
                 <li>
-                  <Link to="/login">
+                  <Link to="/account">
                     <i className="far fa-user"></i>Account
                   </Link>
                 </li>
