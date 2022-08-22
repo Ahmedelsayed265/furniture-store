@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Joi from "joi-browser";
+import { ToastContainer, toast } from "react-toastify";
 class Login extends Component {
   state = {
     userEmail: "",
@@ -10,12 +11,8 @@ class Login extends Component {
   Schema = {
     userEmail: Joi.string().email().required(),
     password: Joi.string()
-      .min(8)
-      .max(25)
-      .regex(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-        "password"
-      ),
+      .regex(/^[a-zA-Z0-9]{8,30}$/)
+      .required(),
   };
   validate = () => {
     const errors = {};
@@ -26,8 +23,26 @@ class Login extends Component {
       this.setState({ errors: {} });
       return null;
     }
-    for (const error of res.error.details) {
-      errors[error.path] = error.message;
+    if (this.state.userEmail === "" || this.state.password === "") {
+      if (this.state.userEmail === "") {
+        toast.error("Email Address is required");
+      }
+      if (this.state.password === "") {
+        toast.error("Password is Required");
+      }
+    } else {
+      for (const error of res.error.details) {
+        if (error.message === '"userEmail" must be a valid email') {
+          toast.error("unvalid username or Emailaddress");
+        }
+        if (
+          error.message ===
+          `"password" with value "${this.state.password}" fails to match the required pattern: /^[a-zA-Z0-9]{8,30}$/`
+        ) {
+          toast.error("incorrect password");
+        }
+        console.log(error.message);
+      }
     }
     this.setState({ errors });
     return errors;
@@ -45,6 +60,7 @@ class Login extends Component {
   render() {
     return (
       <React.Fragment>
+        <ToastContainer />
         <div className="go_back">
           <Link to="/home">Home</Link> / Login
         </div>

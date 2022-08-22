@@ -45,6 +45,16 @@
   background: none;
   outline: none;
 }
+.Login .form_wrap form .form_field .validate_error{
+  width: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  height: 40px;
+  background-color: #ffcdd2;
+}
 .Login .form_wrap form .sign_link {
   width: 100%;
   display: flex;
