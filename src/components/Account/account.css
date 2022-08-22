@@ -1,6 +1,6 @@
 .Login {
   width: 100%;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 100px);
 }
 .Login h3 {
   color: #000;
@@ -44,4 +44,27 @@
   border: 1px solid #787878;
   background: none;
   outline: none;
+}
+.Login .form_wrap form .sign_link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 0;
+}
+.Login .form_wrap form .sign_link span {
+  color: #000;
+  font-weight: 500;
+  font-size: 15px;
+}
+.Login .form_wrap form .sign_link span a {
+  color: #000;
+  font-weight: 500;
+  font-size: 15px;
+}
+.Login .form_wrap form .sign_link span a:hover {
+  text-decoration: underline;
+}
+.link2 {
+  margin-left: 5px;
 }

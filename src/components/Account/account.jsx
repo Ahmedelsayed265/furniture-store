@@ -9,7 +9,7 @@ class MyAccount extends Component {
     return (
       <React.Fragment>
         <Switch>
-          <Route path="/account" component={Login} />
+          <Route path="/account" exact component={Login} />
           <Route path="/account/sign-up" component={Sign} />
         </Switch>
       </React.Fragment>

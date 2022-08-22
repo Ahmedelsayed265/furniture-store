@@ -20,7 +20,12 @@ class Login extends Component {
                 <label htmlFor="userpass">PASSWORD *</label>
                 <input type="password" id="userpass" />
               </div>
-              <Link to="/account/sign-up">don't have account ?</Link>
+              <div className="sign_link">
+                <span>
+                  Don't have an account ?{" "}
+                  <Link to="/account/sign-up">Sign up</Link>
+                </span>
+              </div>
             </form>
           </div>
         </section>

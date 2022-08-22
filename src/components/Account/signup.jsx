@@ -6,7 +6,7 @@ class Sign extends Component {
     return (
       <React.Fragment>
         <div className="go_back">
-          <Link to="/home">Home</Link> / <Link to="/account">Login</Link> /
+          <Link to="/home">Home</Link> / <Link className="link2" to="/account">Login</Link> /
           Signup
         </div>
         <section className="Login">
