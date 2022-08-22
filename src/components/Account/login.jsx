@@ -26,6 +26,9 @@ class Login extends Component {
                   <Link to="/account/sign-up">Sign up</Link>
                 </span>
               </div>
+              <div className="submit">
+                <button type="submit">LOG IN</button>
+              </div>
             </form>
           </div>
         </section>

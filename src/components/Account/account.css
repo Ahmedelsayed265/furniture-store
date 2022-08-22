@@ -1,6 +1,6 @@
 .Login {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: 100vh;
 }
 .Login h3 {
   color: #000;
@@ -67,4 +67,24 @@
 }
 .link2 {
   margin-left: 5px;
+}
+.Login .form_wrap form .submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+.Login .form_wrap form .submit button {
+  width: 120px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
