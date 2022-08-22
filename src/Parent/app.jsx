@@ -10,6 +10,7 @@ import CART from "./../components/cart/cart";
 import notFound from "./../components/error/error";
 import PORT from "./../components/portfolio/portfolio";
 import Wish from "./../components/wishlist/wishlist";
+import MyAccount from "./../components/Account/account";
 
 class App extends Component {
   state = {
@@ -100,6 +101,7 @@ class App extends Component {
                 <PORT projects={this.state.projects} {...props} />
               )}
             />
+            <Route path="/login" component={MyAccount} />
             <Route
               path="/wishlist"
               render={(props) => (
