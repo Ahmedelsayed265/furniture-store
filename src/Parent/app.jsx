@@ -33,6 +33,15 @@ class App extends Component {
     products[index].count = 1;
     this.setState({ products });
   };
+  inCartAddfd = (i) => {
+    console.log(i);
+    let products = [...this.state.products];
+    let index = products.indexOf(i);
+    products[index] = { ...products[index] };
+    products[index].inCart = true;
+    products[index].count = products[index].count + 1;
+    this.setState({ products });
+  };
   inCartDelete = (i) => {
     let products = [...this.state.products];
     let index = products.indexOf(i);
@@ -133,6 +142,9 @@ class App extends Component {
                   products={this.state.products.filter(
                     (p) => p.category !== "projects"
                   )}
+                  onCartAddfd={this.inCartAddfd}
+                  onIncrement={this.increment}
+                  onDecrement={this.decrement}
                   {...props}
                 />
               )}
