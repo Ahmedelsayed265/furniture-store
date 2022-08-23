@@ -11,6 +11,7 @@ import notFound from "./../components/error/error";
 import PORT from "./../components/portfolio/portfolio";
 import Wish from "./../components/wishlist/wishlist";
 import MyAccount from "./../components/Account/account";
+import Details from "./../components/productdetails/productdetails";
 
 class App extends Component {
   state = {
@@ -121,6 +122,17 @@ class App extends Component {
                   onIncrement={this.increment}
                   onDecrement={this.decrement}
                   onDelete={this.inCartDelete}
+                  {...props}
+                />
+              )}
+            />
+            <Route
+              path="/home/id/:name?"
+              render={(props) => (
+                <Details
+                  products={this.state.products.filter(
+                    (p) => p.category !== "projects"
+                  )}
                   {...props}
                 />
               )}

@@ -26,7 +26,7 @@ class FeaturedComponent extends Component {
   }
   render() {
     const { product, onCartChange, onWishAdd } = this.props;
-    const { url, name, price } = this.props.product;
+    const { id, url, name, price, category } = this.props.product;
     return (
       <React.Fragment>
         <div className="col-4 p-0 pro_card">
@@ -35,7 +35,9 @@ class FeaturedComponent extends Component {
               <img src={url} alt="" />
               <div className="menu">
                 <span>
-                  <i className="fas fa-eye"></i>
+                  <Link to={`/home/${category}-${id}`}>
+                    <i className="fas fa-eye"></i>
+                  </Link>
                 </span>
                 <span>
                   <i

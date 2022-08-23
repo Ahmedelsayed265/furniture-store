@@ -67,12 +67,10 @@ tbody td {
   font-size: 14px;
 }
 .table tbody .count span {
-  width: 39px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
 }
 .table tbody .count_contaner {
   display: flex;
