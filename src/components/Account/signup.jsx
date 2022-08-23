@@ -10,8 +10,8 @@ class Sign extends Component {
     errors: {},
   };
   Schema = {
-    username: Joi.string().required(),
-    emailaddress: Joi.string().email().required(),
+    username: Joi.string().alphanum().min(3).max(18).required(),
+    email: Joi.string().email().required(),
     password: Joi.string()
       .regex(/^[a-zA-Z0-9]{8,30}$/)
       .required(),
@@ -41,6 +41,12 @@ class Sign extends Component {
       }
     } else {
       for (const error of res.error.details) {
+        if (
+          error.message ===
+          '"username" length must be at least 3 characters long'
+        ) {
+          toast.error("username length must be at least 3 characters long");
+        }
         if (error.message === '"email" must be a valid email') {
           toast.error("unvalid username or Emailaddress");
         }
@@ -48,7 +54,7 @@ class Sign extends Component {
           error.message ===
           `"password" with value "${this.state.password}" fails to match the required pattern: /^[a-zA-Z0-9]{8,30}$/`
         ) {
-          toast.error("incorrect password");
+          toast.error("use another strong password");
         }
       }
     }
