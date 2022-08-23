@@ -15,18 +15,18 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="#">
+              <Link to="/about">
                 <i className="fa-solid fa-arrow-right-long"></i> Available
                 Services
               </Link>
             </li>
             <li>
-              <Link to="/about">
+              <Link to="/carrers">
                 <i className="fa-solid fa-arrow-right-long"></i> Careers
               </Link>
             </li>
             <li>
-              <Link to="/about">
+              <Link to="/faq=page">
                 <i className="fa-solid fa-arrow-right-long"></i> FAQs
               </Link>
             </li>
@@ -42,19 +42,19 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="#">
+              <Link to="/returns-refunds">
                 <i className="fa-solid fa-arrow-right-long"></i> Returns &
                 Refunds
               </Link>
             </li>
             <li>
-              <Link to="/about">
+              <Link to="/delivery-information">
                 <i className="fa-solid fa-arrow-right-long"></i> Delivery
                 Information
               </Link>
             </li>
             <li>
-              <Link to="/about">
+              <Link to="/terms-condition">
                 <i className="fa-solid fa-arrow-right-long"></i> Terms &
                 Conditions
               </Link>
@@ -90,17 +90,17 @@ const Footer = () => {
           <h5>PROFILE</h5>
           <ul>
             <li>
-              <Link to="#">
+              <Link to="/account">
                 <i className="fa-solid fa-arrow-right-long"></i> My Account
               </Link>
             </li>
             <li>
-              <Link to="#">
+              <Link to="/checkout">
                 <i className="fa-solid fa-arrow-right-long"></i> Checkout
               </Link>
             </li>
             <li>
-              <Link to="#">
+              <Link to="order/tracking">
                 <i className="fa-solid fa-arrow-right-long"></i> Order Tracking
               </Link>
             </li>
@@ -120,10 +120,10 @@ const Footer = () => {
           <p>© 2022 Kong Coder, All Rights Reserved</p>
         </div>
         <div className="right_sub">
-        <i className="fab fa-paypal"></i>
-        <i className="fab fa-amazon-pay"></i>
-        <i className="fab fa-apple-pay"></i>
-        <i className="fab fa-cc-mastercard"></i>
+          <i className="fab fa-paypal"></i>
+          <i className="fab fa-amazon-pay"></i>
+          <i className="fab fa-apple-pay"></i>
+          <i className="fab fa-cc-mastercard"></i>
         </div>
       </div>
     </div>

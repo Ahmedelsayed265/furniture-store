@@ -99,6 +99,10 @@
   width: 100%;
   transition: 0.2s;
 }
+.left_sup_nav ul li a:hover::after {
+  width: 100%;
+  transition: 0.2s;
+}
 nav {
   position: relative;
 }
