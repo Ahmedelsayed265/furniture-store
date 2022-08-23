@@ -39,7 +39,6 @@ class App extends Component {
     let index = products.indexOf(i);
     products[index] = { ...products[index] };
     products[index].inCart = true;
-    products[index].count = products[index].count + 1;
     this.setState({ products });
   };
   inCartDelete = (i) => {
@@ -142,6 +141,7 @@ class App extends Component {
                   products={this.state.products.filter(
                     (p) => p.category !== "projects"
                   )}
+                  onWishAdd={this.inListAdd}
                   onCartAddfd={this.inCartAddfd}
                   onIncrement={this.increment}
                   onDecrement={this.decrement}

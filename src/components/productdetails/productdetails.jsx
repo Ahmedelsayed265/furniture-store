@@ -15,12 +15,11 @@ class Details extends Component {
         <section className="productdetials">
           <div className="pro_card">
             <div className="image">
-              <img src={product.url} alt={`product${product.id}`} />
+              <img src={product.url2} alt={`product${product.id}`} />
             </div>
             <div className="pro_details">
-              <h2>
-                {product.name} <br /> ${product.price}
-              </h2>
+              <h2>{product.name}</h2>
+              <span className="price">${product.price}</span>
               <div className="add">
                 <div className="count">
                   <button
@@ -30,7 +29,7 @@ class Details extends Component {
                   >
                     <i className="fa-solid fa-minus"></i>
                   </button>
-                  <span> {product.count + 1}</span>
+                  <span> {product.count}</span>
                   <button
                     onClick={() => {
                       this.props.onIncrement(product);
@@ -47,6 +46,20 @@ class Details extends Component {
                 >
                   <ion-icon name="bag-outline"></ion-icon>Add to cart
                 </button>
+              </div>
+              <div className="favs">
+                <span onClick={() => this.props.onWishAdd(product)}>
+                  <i
+                    className={
+                      !product.wished ? "far fa-heart" : "fa-solid fa-heart"
+                    }
+                  ></i>{" "}
+                  Add to wishlist
+                </span>
+              </div>
+              <div className="suk">
+                <p>SKU: {product.sku}</p>
+                <span>Category: {product.category}</span>
               </div>
             </div>
           </div>
