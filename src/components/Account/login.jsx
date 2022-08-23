@@ -4,12 +4,12 @@ import Joi from "joi-browser";
 import { ToastContainer, toast } from "react-toastify";
 class Login extends Component {
   state = {
-    userEmail: "",
+    emailaddress: "",
     password: "",
     errors: {},
   };
   Schema = {
-    userEmail: Joi.string().email().required(),
+    emailaddress: Joi.string().email().required(),
     password: Joi.string()
       .regex(/^[a-zA-Z0-9]{8,30}$/)
       .required(),
@@ -23,8 +23,8 @@ class Login extends Component {
       this.setState({ errors: {} });
       return null;
     }
-    if (this.state.userEmail === "" || this.state.password === "") {
-      if (this.state.userEmail === "") {
+    if (this.state.emailaddress === "" || this.state.password === "") {
+      if (this.state.emailaddress === "") {
         toast.error("Email Address is required");
       }
       if (this.state.password === "") {
@@ -32,7 +32,7 @@ class Login extends Component {
       }
     } else {
       for (const error of res.error.details) {
-        if (error.message === '"userEmail" must be a valid email') {
+        if (error.message === '"emailaddress" must be a valid email') {
           toast.error("unvalid username or Emailaddress");
         }
         if (
@@ -41,7 +41,6 @@ class Login extends Component {
         ) {
           toast.error("incorrect password");
         }
-        console.log(error.message);
       }
     }
     this.setState({ errors });
@@ -71,10 +70,10 @@ class Login extends Component {
               <div className="form_field">
                 <label htmlFor="usermail">USERNAME OR EMAIL ADDRESS *</label>
                 <input
-                  name="userEmail"
-                  type="email"
+                  name="emailaddress"
+                  type="text"
                   id="usermail"
-                  vlaue={this.state.userEmail}
+                  vlaue={this.state.emailaddress}
                   onChange={this.change}
                 />
               </div>
