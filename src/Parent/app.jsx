@@ -127,7 +127,7 @@ class App extends Component {
               )}
             />
             <Route
-              path="/home/id/:name?"
+              path="/products-details/:id/:name?"
               render={(props) => (
                 <Details
                   products={this.state.products.filter(

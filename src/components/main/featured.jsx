@@ -35,7 +35,7 @@ class FeaturedComponent extends Component {
               <img src={url} alt="" />
               <div className="menu">
                 <span>
-                  <Link to={`/home/${category}-${id}`}>
+                  <Link to={`/products-details/${category}-${id}`}>
                     <i className="fas fa-eye"></i>
                   </Link>
                 </span>
