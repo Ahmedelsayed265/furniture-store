@@ -12,6 +12,7 @@ import PORT from "./../components/portfolio/portfolio";
 import Wish from "./../components/wishlist/wishlist";
 import MyAccount from "./../components/Account/account";
 import Details from "./../components/productdetails/productdetails";
+import Contact from "./../components/contact/contact";
 
 class App extends Component {
   state = {
@@ -110,6 +111,7 @@ class App extends Component {
                 <PORT projects={this.state.projects} {...props} />
               )}
             />
+            <Route path="/contact" component={Contact} />
             <Route path="/account" component={MyAccount} />
             <Route
               path="/wishlist"

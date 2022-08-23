@@ -12,7 +12,7 @@ const About = () => {
   return (
     <React.Fragment>
       <div className="go_back">
-        <Link to="/home">Home</Link> / About Us
+        <Link to="/home">Home</Link> / About us
       </div>
       <section className="about">
         <div className="about_store">
