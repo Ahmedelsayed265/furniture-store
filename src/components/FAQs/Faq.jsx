@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
+import "./faq.css";
 import MainRoute from "./main";
 import Delivery from "./delivery";
 import Returns from "./return";
@@ -15,24 +16,45 @@ const FAQpage = () => {
       </div>
       <section className="FAQs">
         <aside>
+          <h4>CUSTOMER SUPPORT</h4>
+          <a className="mailTo" href="mailto:support@example.com">
+            support@example.com
+          </a>
           <ul>
             <li>
-              <Link to="/FAQs">FAQ</Link>
+              <Link to="/FAQs">
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>FAQ
+              </Link>
             </li>
             <li>
-              <Link to="/FAQs/terms-condition">Terms & Conditions</Link>
+              <Link to="/FAQs/terms-condition">
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>Terms
+                & Conditions
+              </Link>
             </li>
             <li>
-              <Link to="/FAQs/delivery-information">Delivery Information</Link>
+              <Link to="/FAQs/delivery-information">
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                Delivery Information
+              </Link>
             </li>
             <li>
-              <Link to="/FAQs/returns-refunds">Returns & Refunds</Link>
+              <Link to="/FAQs/returns-refunds">
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                Returns & Refunds
+              </Link>
             </li>
             <li>
-              <Link to="/FAQs/order-tracking">Order Tracking</Link>
+              <Link to="/FAQs/order-tracking">
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>Order
+                Tracking
+              </Link>
             </li>
             <li>
-              <Link to="/FAQs/carrers">Careers</Link>
+              <Link to="/FAQs/carrers">
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                Careers
+              </Link>
             </li>
           </ul>
         </aside>

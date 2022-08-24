@@ -1,0 +1,68 @@
+.FAQs {
+  width: 100%;
+  display: flex;
+  margin: 40px 0 100px 0;
+}
+.FAQs aside {
+  width: 20%;
+}
+.FAQs main {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.FAQs aside h4 {
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.FAQs aside .mailTo {
+  color: #000;
+  font-weight: 400;
+}
+.FAQs aside .mailTo:hover {
+  text-decoration: underline;
+}
+.FAQs aside ul {
+  margin-top: 50px;
+}
+.FAQs aside ul li i {
+  margin-right: 0;
+  font-size: 14px;
+  width: 0;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+.FAQs aside ul li a:hover i {
+  width: 14px;
+  margin-right: 4px;
+}
+.FAQs aside ul li a {
+  color: #000;
+}
+.FAQs main h2 {
+  font-weight: 400;
+  color: #000;
+  font-size: 40px;
+}
+.FAQs main .Qestion {
+  padding-right: 100px;
+}
+.FAQs main .Qestion h3 {
+  color: #000;
+  font-weight: 400;
+}
+.FAQs main .Qestion p {
+  color: #000;
+  line-height: 1.3;
+}
+.FAQs main .Qestion p span {
+  text-decoration: underline;
+}
+.FAQs main ul{
+  list-style: disc;
+  color: #000;
+  margin-left: 20px;
+}

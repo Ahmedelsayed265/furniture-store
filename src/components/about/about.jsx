@@ -18,7 +18,7 @@ const About = () => {
         <div className="about_store">
           <div className="left_wrapper">
             <div className="ab_head">
-              <h1>ABOUT STÒRE</h1>
+              <h1>ABOUT STÒIR</h1>
               <p>
                 psum voluptate et non. Est velit et ex laboriosam dolor est
                 inven tore quo numquam. Labore voluptas
