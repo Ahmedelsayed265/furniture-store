@@ -21,12 +21,12 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/carrers">
+              <Link to="/FAQs/carrers">
                 <i className="fa-solid fa-arrow-right-long"></i> Careers
               </Link>
             </li>
             <li>
-              <Link to="/faq=page">
+              <Link to="/FAQs">
                 <i className="fa-solid fa-arrow-right-long"></i> FAQs
               </Link>
             </li>
@@ -42,19 +42,19 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/returns-refunds">
+              <Link to="/FAQs/returns-refunds">
                 <i className="fa-solid fa-arrow-right-long"></i> Returns &
                 Refunds
               </Link>
             </li>
             <li>
-              <Link to="/delivery-information">
+              <Link to="/FAQs/delivery-information">
                 <i className="fa-solid fa-arrow-right-long"></i> Delivery
                 Information
               </Link>
             </li>
             <li>
-              <Link to="/terms-condition">
+              <Link to="/FAQs/terms-condition">
                 <i className="fa-solid fa-arrow-right-long"></i> Terms &
                 Conditions
               </Link>
@@ -100,7 +100,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="order/tracking">
+              <Link to="/FAQs/order-tracking">
                 <i className="fa-solid fa-arrow-right-long"></i> Order Tracking
               </Link>
             </li>

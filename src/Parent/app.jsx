@@ -13,6 +13,7 @@ import Wish from "./../components/wishlist/wishlist";
 import MyAccount from "./../components/Account/account";
 import Details from "./../components/productdetails/productdetails";
 import Contact from "./../components/contact/contact";
+import FAQpage from "./../components/FAQs/Faq";
 
 class App extends Component {
   state = {
@@ -151,6 +152,7 @@ class App extends Component {
                 />
               )}
             />
+            <Route path="/FAQs" component={FAQpage} />
             <Route path="/ERROR404" component={notFound} />
             <Redirect to="/ERROR404" />
           </Switch>
