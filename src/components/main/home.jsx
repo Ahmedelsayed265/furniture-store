@@ -319,7 +319,7 @@ const HomeComp = (props) => {
           </form>
           <p>
             BY SUBSCRIBING, YOU ACCEPT OUR{" "}
-            <Link to="/terms-condition">
+            <Link to="/FAQs/terms-condition">
               PRIVACY POLCY{" "}
               <i className="fa-solid fa-arrow-up-right-from-square"></i>
             </Link>
