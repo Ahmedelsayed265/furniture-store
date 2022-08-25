@@ -115,3 +115,50 @@
 .Checkout .billing_container form .order_details .head_order span {
   font-size: 14px;
 }
+.Checkout .billing_container form .order_details .head_order b {
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+}
+.Checkout .billing_container form .order_details .shiping {
+  padding: 15px 50px 15px 0 !important;
+}
+.Checkout .billing_container form .order_details .shiping .ship {
+  margin-top: 5px;
+}
+.Checkout .billing_container form .order_details .shiping .ship input {
+  margin-right: 5px;
+  cursor: pointer;
+  accent-color: black;
+}
+.Checkout .billing_container form .order_details .shiping .ship label {
+  cursor: pointer;
+}
+.Checkout .billing_container form .order_details .payment {
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+.Checkout .billing_container form .order_details .payment input {
+  margin-right: 5px;
+  cursor: pointer;
+  accent-color: black;
+  cursor: pointer;
+}
+.Checkout .billing_container form .order_details .payment label {
+  cursor: pointer;
+}
+.Checkout .billing_container form .order_details .term {
+  padding: 25px 0 40px 0;
+  margin-bottom: 0;
+}
+.Checkout .billing_container form button {
+  width: 155px;
+  background-color: #000;
+  outline: none;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  height: 40px;
+  margin-left: 12px;
+}

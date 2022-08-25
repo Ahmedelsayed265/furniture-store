@@ -91,20 +91,94 @@ class Checkout extends Component {
                 <input name="email" type="text" id="email" />
               </div>
               <div className="order_details">
-              <h4>Your order</h4>
-              <div className="head_order">
-                <span>PRODUCT</span>
-                <span>SUBTOTAL</span>
-              </div>
-              {this.props.products.map((p) => (
+                <h4>Your order</h4>
                 <div className="head_order">
-                  <span>
-                    {p.name} <i>× {p.count}</i>
-                  </span>
-                  <span>${p.price}</span>
+                  <span>PRODUCT</span>
+                  <span>SUBTOTAL</span>
                 </div>
-              ))}
-            </div>
+                {this.props.products.map((p) => (
+                  <div key={p.id} className="head_order">
+                    <span>
+                      {p.name} <i>× {p.count}</i>
+                    </span>
+                    <span>${p.price}</span>
+                  </div>
+                ))}
+                <div className="shiping head_order">
+                  <span>SHIPPING</span>
+                  <div>
+                    <div className="ship">
+                      <input
+                        type="radio"
+                        value="flatRate"
+                        id="flatRate"
+                        name="shipping"
+                      />
+                      <label htmlFor="flatRate">Flat rate</label>
+                    </div>
+                    <div className="ship">
+                      <input
+                        type="radio"
+                        value="freeShipping"
+                        id="freeShipping"
+                        name="shipping"
+                      />
+                      <label htmlFor="freeShipping">Free shipping</label>
+                    </div>
+                    <div className="ship">
+                      <input
+                        type="radio"
+                        value="localPickup"
+                        id="localPickup"
+                        name="shipping"
+                      />
+                      <label htmlFor="localPickup">Local pickup</label>
+                    </div>
+                  </div>
+                </div>
+                <div className="head_order">
+                  <span>TOTAL</span>
+                  <b>
+                    $
+                    {this.props.products
+                      .reduce((acc, p) => acc + p.count * p.price, 0)
+                      .toFixed(2)}
+                  </b>
+                </div>
+                <div className="payment">
+                  <input
+                    type="radio"
+                    value="directTransfer"
+                    id="directTransfer"
+                    name="payment_method"
+                  />
+                  <label htmlFor="directTransfer">DIRECT BANK TRANSFER</label>
+                </div>
+                <div className="payment">
+                  <input
+                    type="radio"
+                    value="checkPayment"
+                    id="checkPayment"
+                    name="payment_method"
+                  />
+                  <label htmlFor="checkPayment">CHECK PAYMENTS</label>
+                </div>
+                <div className="payment">
+                  <input
+                    type="radio"
+                    value="cachOnDelevery"
+                    id="cachOnDelevery"
+                    name="payment_method"
+                  />
+                  <label htmlFor="cachOnDelevery">CASH ON DELIVERY</label>
+                </div>
+                <p className="term">
+                  Your personal data will be used to process your order, support
+                  your experience throughout this website, and for other
+                  purposes described in our privacy policy.
+                </p>
+              </div>
+              <button type="submit">PLACE ORDER</button>
             </form>
           </div>
         </section>
