@@ -41,7 +41,7 @@ class MINCART extends Component {
             <ion-icon name="bag-outline"></ion-icon>
             <span> VIEW SHOPPING CART</span>
           </Link>
-          <Link to="/checkout" className="check">
+          <Link onClick={closeCart} to="/checkout" className="check">
             GO TO CHECKOUT{" "}
             <i className="fa-solid fa-arrow-up-right-from-square"></i>
           </Link>

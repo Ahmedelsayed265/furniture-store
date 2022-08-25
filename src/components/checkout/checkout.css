@@ -1,0 +1,10 @@
+.Checkout {
+  width: 100%;
+}
+.Checkout h3 {
+  text-align: center;
+  color: #000;
+  font-weight: 400;
+  font-size: 40px;
+  margin: 25px 0 50px 0;
+}

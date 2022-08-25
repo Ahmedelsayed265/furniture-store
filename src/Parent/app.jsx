@@ -14,6 +14,7 @@ import MyAccount from "./../components/Account/account";
 import Details from "./../components/productdetails/productdetails";
 import Contact from "./../components/contact/contact";
 import FAQpage from "./../components/FAQs/Faq";
+import Checkout from "./../components/checkout/checkout";
 
 class App extends Component {
   state = {
@@ -152,6 +153,7 @@ class App extends Component {
                 />
               )}
             />
+            <Route path="/checkout" component={Checkout} />
             <Route path="/FAQs" component={FAQpage} />
             <Route path="/ERROR404" component={notFound} />
             <Redirect to="/ERROR404" />
