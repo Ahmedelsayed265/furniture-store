@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   padding-left: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .Checkout .copon p {
   margin-bottom: 0;
@@ -94,4 +94,24 @@
 .Checkout .billing_container form .field input::placeholder {
   color: #000;
   font-weight: 400;
+}
+.Checkout .billing_container form .order_details {
+  margin-top: 50px;
+}
+.Checkout .billing_container form .order_details h4 {
+  color: #000;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.Checkout .billing_container form .order_details .head_order {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 100px 15px 0;
+}
+.Checkout .billing_container form .order_details .head_order span {
+  font-size: 14px;
 }

@@ -153,7 +153,17 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/checkout" component={Checkout} />
+            <Route
+              path="/checkout"
+              render={(props) => (
+                <Checkout
+                  {...props}
+                  products={this.state.products.filter(
+                    (p) => p.inCart && p.count > 0
+                  )}
+                />
+              )}
+            />
             <Route path="/FAQs" component={FAQpage} />
             <Route path="/ERROR404" component={notFound} />
             <Redirect to="/ERROR404" />

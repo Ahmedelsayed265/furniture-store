@@ -90,6 +90,21 @@ class Checkout extends Component {
                 <label htmlFor="email">Email address *</label>
                 <input name="email" type="text" id="email" />
               </div>
+              <div className="order_details">
+              <h4>Your order</h4>
+              <div className="head_order">
+                <span>PRODUCT</span>
+                <span>SUBTOTAL</span>
+              </div>
+              {this.props.products.map((p) => (
+                <div className="head_order">
+                  <span>
+                    {p.name} <i>× {p.count}</i>
+                  </span>
+                  <span>${p.price}</span>
+                </div>
+              ))}
+            </div>
             </form>
           </div>
         </section>
