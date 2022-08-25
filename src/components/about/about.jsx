@@ -36,7 +36,7 @@ const About = () => {
               </p>
             </div>
             <div className="career">
-              <Link to="#">SEE CAREERS</Link>
+              <Link to="/FAQS/carrers">SEE CAREERS</Link>
             </div>
           </div>
           <div className="right_wrapper">
