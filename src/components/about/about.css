@@ -46,8 +46,12 @@
 .career a {
   color: #000;
   border: 1px solid #000;
-  border-radius: 4px;
   padding: 8px 10px;
+}
+.career a:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.3s ease-in-out;
 }
 .serv_outer {
   width: 100%;
