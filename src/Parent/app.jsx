@@ -15,6 +15,7 @@ import Details from "./../components/productdetails/productdetails";
 import Contact from "./../components/contact/contact";
 import FAQpage from "./../components/FAQs/Faq";
 import Checkout from "./../components/checkout/checkout";
+import SHOP from "./../components/shop/shopmenu";
 
 class App extends Component {
   state = {
@@ -111,6 +112,17 @@ class App extends Component {
               path="/portfolio"
               render={(props) => (
                 <PORT projects={this.state.projects} {...props} />
+              )}
+            />
+            <Route
+              path="/shop"
+              render={(props) => (
+                <SHOP
+                  products={this.state.products.filter(
+                    (product) => product.category !== "projects"
+                  )}
+                  {...props}
+                />
               )}
             />
             <Route path="/contact" component={Contact} />
