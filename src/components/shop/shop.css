@@ -11,6 +11,27 @@
   font-size: 16px;
   color: #000;
   font-weight: 400;
+  margin-bottom: 25px;
+}
+.shop aside ul li {
+  margin-top: 5px;
+}
+.shop aside ul li span i {
+  color: #000;
+  font-size: 13px;
+  width: 0;
+  overflow: hidden;
+  margin-right: 0;
+}
+.shop aside ul li span:hover i {
+  margin-right: 4px;
+  width: 14px;
+  transition: 0.3s ease-in-out;
+}
+.shop aside ul li span {
+  font-size: 14px;
+  cursor: pointer;
+  color: #000;
 }
 .shop main {
   width: 82%;
