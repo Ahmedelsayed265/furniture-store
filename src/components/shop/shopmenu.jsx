@@ -6,14 +6,16 @@ class SHOP extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filteredProducts: props.products,
+      allProducts: props.products,
     };
   }
   chairs = () => {
-    let filteredState = [...this.state.filteredProducts];
-    let products = this.props.products.filter((p) => p.category === "Chairs");
-    filteredState = products;
-    this.setState({ filteredProducts: filteredState });
+    let allProducts = [...this.state.allProducts];
+    let filteredProducts = this.state.allProducts.filter(
+      (p) => p.category === "Chairs"
+    );
+    allProducts = filteredProducts;
+    this.setState({ allProducts });
   };
   render() {
     return (
@@ -70,7 +72,7 @@ class SHOP extends Component {
           <main>
             <h2>ALL PRODUCTS</h2>
             <div className="row">
-              {this.state.filteredProducts.map((product) => (
+              {this.state.allProducts.map((product) => (
                 <ProductComp
                   key={product.id}
                   product={product}
