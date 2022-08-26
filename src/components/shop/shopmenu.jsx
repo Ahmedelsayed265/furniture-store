@@ -9,10 +9,46 @@ class SHOP extends Component {
       allProducts: props.products,
     };
   }
+  allProducts = () => {
+    let allProducts = [...this.state.allProducts];
+    let filteredProducts = this.props.products;
+    allProducts = filteredProducts;
+    this.setState({ allProducts });
+  };
   chairs = () => {
     let allProducts = [...this.state.allProducts];
-    let filteredProducts = this.state.allProducts.filter(
+    let filteredProducts = this.props.products.filter(
       (p) => p.category === "Chairs"
+    );
+    allProducts = filteredProducts;
+    this.setState({ allProducts });
+  };
+  lightning = () => {
+    let allProducts = [...this.state.allProducts];
+    let filteredProducts = this.props.products.filter(
+      (p) => p.category === "Lamps"
+    );
+    allProducts = filteredProducts;
+    this.setState({ allProducts });
+  };
+  bestSellers = () => {
+    let allProducts = [...this.state.allProducts];
+    let filteredProducts = this.props.products.filter((p) => p.bestSeller);
+    allProducts = filteredProducts;
+    this.setState({ allProducts });
+  };
+  Tabels = () => {
+    let allProducts = [...this.state.allProducts];
+    let filteredProducts = this.props.products.filter(
+      (p) => p.category === "Tables"
+    );
+    allProducts = filteredProducts;
+    this.setState({ allProducts });
+  };
+  clockes = () => {
+    let allProducts = [...this.state.allProducts];
+    let filteredProducts = this.props.products.filter(
+      (p) => p.category === "Clocks"
     );
     allProducts = filteredProducts;
     this.setState({ allProducts });
@@ -28,12 +64,12 @@ class SHOP extends Component {
             <h3>CATEGORIES</h3>
             <ul>
               <li>
-                <span>
+                <span onClick={this.allProducts}>
                   <i className="fas fa-arrow-right"></i>ALL PRODUCTS
                 </span>
               </li>
               <li>
-                <span>
+                <span onClick={this.bestSellers}>
                   <i className="fas fa-arrow-right"></i>BEST SELLERS
                 </span>
               </li>
@@ -43,17 +79,17 @@ class SHOP extends Component {
                 </span>
               </li>
               <li>
-                <span>
+                <span onClick={this.lightning}>
                   <i className="fas fa-arrow-right"></i>LIGHTNING
                 </span>
               </li>
               <li>
-                <span>
+                <span onClick={this.Tabels}>
                   <i className="fas fa-arrow-right"></i>COFFE TABELS
                 </span>
               </li>
               <li>
-                <span>
+                <span onClick={this.clockes}>
                   <i className="fas fa-arrow-right"></i>WOODEN CLOCKS
                 </span>
               </li>
