@@ -122,6 +122,7 @@ class App extends Component {
                     (product) => product.category !== "projects"
                   )}
                   onWishAdd={this.inListAdd}
+                  onCartChange={this.inCartAdd}
                   {...props}
                 />
               )}

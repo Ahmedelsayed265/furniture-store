@@ -15,6 +15,9 @@
   align-items: flex-end;
   gap: 0;
 }
+.shop main .pro_card .inner_card .img_caption{
+  margin-top: 16px;
+}
 .shop main .pro_card .inner_card .img_wraper .menu span {
   height: 0;
   overflow: hidden;

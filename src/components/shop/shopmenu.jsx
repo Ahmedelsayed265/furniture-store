@@ -27,6 +27,7 @@ class SHOP extends Component {
                   key={product.id}
                   product={product}
                   onWishAdd={this.props.onWishAdd}
+                  onCartChange={this.props.onCartChange}
                 />
               ))}
             </div>
