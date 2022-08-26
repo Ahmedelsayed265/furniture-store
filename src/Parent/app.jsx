@@ -121,6 +121,7 @@ class App extends Component {
                   products={this.state.products.filter(
                     (product) => product.category !== "projects"
                   )}
+                  onWishAdd={this.inListAdd}
                   {...props}
                 />
               )}

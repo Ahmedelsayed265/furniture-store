@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./shop.css";
+import ProductComp from "./product";
 class SHOP extends Component {
   state = {};
   render() {
@@ -20,7 +21,15 @@ class SHOP extends Component {
           </aside>
           <main>
             <h2>ALL PRODUCTS</h2>
-            <div className="row"></div>
+            <div className="row">
+              {this.props.products.map((product) => (
+                <ProductComp
+                  key={product.id}
+                  product={product}
+                  onWishAdd={this.props.onWishAdd}
+                />
+              ))}
+            </div>
           </main>
         </section>
       </React.Fragment>

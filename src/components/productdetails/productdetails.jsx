@@ -54,7 +54,7 @@ class Details extends Component {
                       !product.wished ? "far fa-heart" : "fa-solid fa-heart"
                     }
                   ></i>{" "}
-                  {!product.wished ? "Add to wishlist" : "remove from wishlist"}
+                  {!product.wished ? "Add to wishlist" : "Wishlist"}
                 </span>
               </div>
               <div className="suk">
