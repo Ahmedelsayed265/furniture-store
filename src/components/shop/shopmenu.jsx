@@ -54,6 +54,7 @@ class SHOP extends Component {
     this.setState({ allProducts });
   };
   render() {
+    const { onCartChange, onWishAdd } = this.props;
     return (
       <React.Fragment>
         <div className="go_back">
@@ -112,8 +113,8 @@ class SHOP extends Component {
                 <ProductComp
                   key={product.id}
                   product={product}
-                  onWishAdd={this.props.onWishAdd}
-                  onCartChange={this.props.onCartChange}
+                  onWishAdd={onWishAdd}
+                  onCartChange={onCartChange}
                 />
               ))}
             </div>
