@@ -53,6 +53,14 @@ class SHOP extends Component {
     allProducts = filteredProducts;
     this.setState({ allProducts });
   };
+  Sofas = () => {
+    let allProducts = [...this.state.allProducts];
+    let filteredProducts = this.props.products.filter(
+      (p) => p.category === "Sofas"
+    );
+    allProducts = filteredProducts;
+    this.setState({ allProducts });
+  };
   render() {
     const { onCartChange, onWishAdd } = this.props;
     return (
@@ -95,7 +103,7 @@ class SHOP extends Component {
                 </span>
               </li>
               <li>
-                <span>
+                <span onClick={this.Sofas}>
                   <i className="fas fa-arrow-right"></i>SOFAS
                 </span>
               </li>

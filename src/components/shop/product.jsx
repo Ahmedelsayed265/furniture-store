@@ -48,7 +48,7 @@ class ProductComp extends Component {
             <p>{name}</p>
           </div>
           <div className="add_cart">
-            <span>${price}</span>
+            <span>${price.toFixed(2)}</span>
             <div className="link" onClick={() => onCartChange(product)}>
               {this.ifInCart()}
             </div>
