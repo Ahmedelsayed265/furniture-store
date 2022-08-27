@@ -150,6 +150,13 @@ class SHOP extends Component {
           </aside>
           <main>
             <h2>PRODUCTS</h2>
+            <h6>
+              Showing {this.state.start + 1} -{" "}
+              {this.state.stop > this.props.products.length
+                ? this.props.products.length
+                : this.state.stop}{" "}
+              <span>of {this.props.products.length} results</span>
+            </h6>
             <div className="row">
               {this.props.products
                 .slice(this.state.start, this.state.stop)
