@@ -123,7 +123,7 @@ class SHOP extends Component {
             </ul>
           </aside>
           <main>
-            <h2>ALL PRODUCTS</h2>
+            <h2>PRODUCTS</h2>
             <div className="row">
               {this.state.allProducts.map((product) => (
                 <ProductComp
