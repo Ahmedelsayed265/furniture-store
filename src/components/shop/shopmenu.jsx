@@ -3,12 +3,6 @@ import { Link } from "react-router-dom";
 import "./shop.css";
 import ProductComp from "./product";
 class SHOP extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      allProducts: props.products,
-    };
-  }
   allProducts = () => {
     let allProducts = [...this.state.allProducts];
     let filteredProducts = this.props.products;
@@ -125,7 +119,7 @@ class SHOP extends Component {
           <main>
             <h2>PRODUCTS</h2>
             <div className="row">
-              {this.state.allProducts.map((product) => (
+              {this.props.products.map((product) => (
                 <ProductComp
                   key={product.id}
                   product={product}
