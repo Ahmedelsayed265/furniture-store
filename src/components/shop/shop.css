@@ -42,3 +42,34 @@
   color: #000;
   margin-bottom: 25px;
 }
+.shop main .navigtor {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+.shop main .navigtor i {
+  color: #000;
+  font-size: 18px;
+  cursor: pointer;
+}
+.shop main .navigtor i:nth-child(1) {
+  margin-right: 15px;
+}
+.shop main .navigtor i:nth-child(1) {
+  margin-left: 15px;
+}
+.shop main .navigtor b {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  display: block;
+  background-color: #000;
+}
+.shop main .navigtor span {
+  cursor: pointer;
+  color: #000;
+  font-size: 17px;
+}

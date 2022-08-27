@@ -101,7 +101,7 @@ class Checkout extends Component {
                     <span>
                       {p.name} <i>× {p.count}</i>
                     </span>
-                    <span>${p.price}</span>
+                    <span>${p.price.toFixed(2)}</span>
                   </div>
                 ))}
                 <div className="shiping head_order">
