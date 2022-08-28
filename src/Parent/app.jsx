@@ -23,7 +23,9 @@ class App extends Component {
     projects: [],
   };
   async componentDidMount() {
-    let { data } = await axios.get("http://localhost:3000/products");
+    let { data } = await axios.get(
+      "https://eskil-furniture-api.herokuapp.com/products"
+    );
     let products = data.filter((pro) => pro.category !== "projects");
     this.setState({ products });
     let projects = data.filter((pro) => pro.category === "projects");
