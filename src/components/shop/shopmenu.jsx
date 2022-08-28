@@ -74,26 +74,17 @@ class SHOP extends Component {
     });
   };
   filerFunction = (category) => {
-    switch (category) {
-      case "all":
-        break;
-      case "best":
-        break;
-      case "chairs":
-        break;
-      case "lightning":
-        break;
-      case "tabels":
-        break;
-      case "clocks":
-        break;
-      case "sofas":
-        break;
-      case "gifts":
-        break;
-      default:
-        break;
+    let proArr = this.props.products;
+    if (category === "all") {
+      proArr = this.props.products;
+    } else if (category === "best") {
+      proArr = this.props.products.filter((p) => p.bestSeller);
+    } else {
+      proArr = this.props.products.filter(
+        (product) => product.category === category
+      );
     }
+    console.log(proArr);
   };
   render() {
     const { onCartChange, onWishAdd } = this.props;
@@ -107,42 +98,42 @@ class SHOP extends Component {
             <h3>CATEGORIES</h3>
             <ul>
               <li>
-                <span onClick={() => this.allProducts("all")}>
+                <span onClick={() => this.filerFunction("all")}>
                   <i className="fas fa-arrow-right"></i>ALL PRODUCTS
                 </span>
               </li>
               <li>
-                <span onClick={() => this.allProducts("best")}>
+                <span onClick={() => this.filerFunction("best")}>
                   <i className="fas fa-arrow-right"></i>BEST SELLERS
                 </span>
               </li>
               <li>
-                <span onClick={() => this.allProducts("chairs")}>
+                <span onClick={() => this.filerFunction("Chairs")}>
                   <i className="fas fa-arrow-right"></i>CHAIRS
                 </span>
               </li>
               <li>
-                <span onClick={() => this.allProducts("lightning")}>
+                <span onClick={() => this.filerFunction("Lamps")}>
                   <i className="fas fa-arrow-right"></i>LIGHTNING
                 </span>
               </li>
               <li>
-                <span onClick={() => this.allProducts("tabels")}>
+                <span onClick={() => this.filerFunction("Tables")}>
                   <i className="fas fa-arrow-right"></i>COFFE TABELS
                 </span>
               </li>
               <li>
-                <span onClick={() => this.allProducts("clocks")}>
+                <span onClick={() => this.filerFunction("Clocks")}>
                   <i className="fas fa-arrow-right"></i>WOODEN CLOCKS
                 </span>
               </li>
               <li>
-                <span onClick={() => this.allProducts("sofas")}>
+                <span onClick={() => this.filerFunction("Sofas")}>
                   <i className="fas fa-arrow-right"></i>SOFAS
                 </span>
               </li>
               <li>
-                <span onClick={() => this.allProducts("gifts")}>
+                <span onClick={() => this.filerFunction("Gifts")}>
                   <i className="fas fa-arrow-right"></i>Gifts
                 </span>
               </li>
