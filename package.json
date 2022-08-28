@@ -2,7 +2,7 @@
   "name": "furniture-store",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Ahmedelsayed265/furniture-store",
+  "homepage": "https://github.com/Ahmedelsayed265",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.2",
     "@testing-library/jest-dom": "^5.16.5",
