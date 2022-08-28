@@ -78,7 +78,12 @@ class SHOP extends Component {
     let stateCategory = this.state.category;
     stateCategory = category;
     this.setState({ category: stateCategory });
-    console.log(stateCategory);
+    let start = this.state.start;
+    start = 0;
+    this.setState({ start: start });
+    let stop = this.state.stop;
+    stop = 21;
+    this.setState({ stop: stop });
   };
   render() {
     let products = [];
