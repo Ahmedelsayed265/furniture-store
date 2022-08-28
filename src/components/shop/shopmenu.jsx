@@ -6,6 +6,7 @@ class SHOP extends Component {
   state = {
     start: 0,
     stop: 21,
+    category: "",
   };
   firstPage = () => {
     let state = { ...this.state };
@@ -74,19 +75,24 @@ class SHOP extends Component {
     });
   };
   filerFunction = (category) => {
-    let proArr = this.props.products;
-    if (category === "all") {
-      proArr = this.props.products;
-    } else if (category === "best") {
-      proArr = this.props.products.filter((p) => p.bestSeller);
-    } else {
-      proArr = this.props.products.filter(
-        (product) => product.category === category
-      );
-    }
-    console.log(proArr);
+    let stateCategory = this.state.category;
+    stateCategory = category;
+    this.setState({ category: stateCategory });
+    console.log(stateCategory);
   };
   render() {
+    let products = [];
+    if (this.state.category === "") {
+      products = this.props.products;
+    } else if (this.state.category === "all") {
+      products = this.props.products;
+    } else if (this.state.category === "best") {
+      products = this.props.products.filter((p) => p.bestSeller);
+    } else {
+      products = this.props.products.filter(
+        (product) => product.category === this.state.category
+      );
+    }
     const { onCartChange, onWishAdd } = this.props;
     return (
       <React.Fragment>
@@ -143,13 +149,13 @@ class SHOP extends Component {
             <h2>PRODUCTS</h2>
             <h6>
               Showing {this.state.start + 1} -{" "}
-              {this.state.stop > this.props.products.length
-                ? this.props.products.length
+              {this.state.stop > products.length
+                ? products.length
                 : this.state.stop}{" "}
-              <span>of {this.props.products.length} results</span>
+              <span>of {products.length} results</span>
             </h6>
             <div className="row">
-              {this.props.products
+              {products
                 .slice(this.state.start, this.state.stop)
                 .map((product) => (
                   <ProductComp
@@ -160,15 +166,19 @@ class SHOP extends Component {
                   />
                 ))}
             </div>
-            <div className="navigtor">
-              <i className="fas fa-angle-left" onClick={this.prevPage}></i>
-              <span onClick={this.firstPage}>1</span>
-              <b></b>
-              <span onClick={this.secondPage}>2</span>
-              <b></b>
-              <span onClick={this.thirdPage}>3</span>
-              <i className="fas fa-angle-right" onClick={this.nextPage}></i>
-            </div>
+            {products.length < 21 ? (
+              ""
+            ) : (
+              <div className="navigtor">
+                <i className="fas fa-angle-left" onClick={this.prevPage}></i>
+                <span onClick={this.firstPage}>1</span>
+                <b></b>
+                <span onClick={this.secondPage}>2</span>
+                <b></b>
+                <span onClick={this.thirdPage}>3</span>
+                <i className="fas fa-angle-right" onClick={this.nextPage}></i>
+              </div>
+            )}
           </main>
         </section>
       </React.Fragment>
