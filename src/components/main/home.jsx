@@ -25,7 +25,7 @@ const HomeComp = (props) => {
   return (
     <React.Fragment>
       <div className="row header_content">
-        <div className="col-4 up_1">
+        <div className="col-lg-4 up_1">
           <div className="sitetitle">
             <div className="head">
               <h1>
@@ -70,7 +70,7 @@ const HomeComp = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-5 up_1 p-0 vid_entire">
+        <div className="col-lg-5 up_1 p-0 vid_entire">
           <div className="sm-caption">
             <div className="caption">
               <p>10% discount for registered users</p>
@@ -79,7 +79,7 @@ const HomeComp = (props) => {
           </div>
           <video loop muted autoPlay playsInline src={EskilMP4} />
         </div>
-        <div className="col-3 up_1 p-0 ">
+        <div className="col-lg-3 up_1 p-0 ">
           <div className="last_container d-flex flex-column">
             <img src={SMChair} alt="chair" />
             <p>
@@ -136,7 +136,7 @@ const HomeComp = (props) => {
             <span></span>
           </div>
         </div>
-        <div className="col-3 Team_card">
+        <div className="col-lg-3 col-11 Team_card">
           <div className="team_img">
             <img src={team4} alt="team1" />
             <div className="social">
@@ -158,7 +158,7 @@ const HomeComp = (props) => {
             <p>FINE CERAMICS</p>
           </div>
         </div>
-        <div className="col-3 Team_card">
+        <div className="col-lg-3 col-11 Team_card">
           <div className="team_img">
             <img src={team2} alt="team1" />
             <div className="social">
@@ -180,7 +180,7 @@ const HomeComp = (props) => {
             <p>ARCHITECT</p>
           </div>
         </div>
-        <div className="col-3 Team_card">
+        <div className="col-lg-3 col-11 Team_card">
           <div className="team_img">
             <img src={team3} alt="team1" />
             <div className="social">
@@ -202,7 +202,7 @@ const HomeComp = (props) => {
             <p>STORE MANAGER</p>
           </div>
         </div>
-        <div className="col-3 Team_card">
+        <div className="col-lg-3 col-11 Team_card">
           <div className="team_img">
             <img src={team1} alt="team1" />
             <div className="social">
@@ -233,7 +233,7 @@ const HomeComp = (props) => {
             <span></span>
           </div>
         </div>
-        <div className="col-3 blog_card">
+        <div className="col-lg-3 col-11 blog_card">
           <div className="inner_card">
             <div className="img_wrapper">
               <img src={blog1} alt="blog1" />
@@ -252,7 +252,7 @@ const HomeComp = (props) => {
             </p>
           </div>
         </div>
-        <div className="col-3 blog_card">
+        <div className="col-lg-3 col-11 blog_card">
           <div className="inner_card">
             <div className="img_wrapper">
               <img src={blog2} alt="blog2" />
@@ -270,7 +270,7 @@ const HomeComp = (props) => {
             </p>
           </div>
         </div>
-        <div className="col-3 blog_card">
+        <div className="col-lg-3 col-11 blog_card">
           <div className="inner_card">
             <div className="img_wrapper">
               <img src={blog3} alt="blog3" />
@@ -288,7 +288,7 @@ const HomeComp = (props) => {
             </p>
           </div>
         </div>
-        <div className="col-3 blog_card">
+        <div className="col-lg-3 col-11 blog_card">
           <div className="inner_card">
             <div className="img_wrapper">
               <img src={blog4} alt="blog4" />

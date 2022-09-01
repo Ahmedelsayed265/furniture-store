@@ -29,7 +29,7 @@ class FeaturedComponent extends Component {
     const { id, url, name, price, category } = this.props.product;
     return (
       <React.Fragment>
-        <div className="col-4 p-0 pro_card">
+        <div className="col-lg-4 col-11 p-0 pro_card">
           <div className="inner_card">
             <div className="img_wraper">
               <img src={url} alt="" />
