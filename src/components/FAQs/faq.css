@@ -102,7 +102,44 @@
   margin-top: 5px;
   display: block;
 }
-.FAQs main .text3{
+.FAQs main .text3 {
   line-height: 1.7em !important;
   padding-right: 50px;
+}
+@media (max-width: 576px) {
+  .FAQs {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .FAQs aside {
+    width: 100%;
+  }
+  .FAQs aside ul {
+    margin-top: 25px;
+  }
+  .FAQs aside ul li {
+    margin-top: 4px;
+  }
+  .FAQs main {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .FAQs main h2 {
+    font-size: 30px;
+  }
+  .FAQs main .text {
+    padding: 0;
+  }
+  .FAQs main .text3 {
+    padding: 0;
+  }
+  .FAQs main .text_ret {
+    padding: 0;
+  }
+  .FAQs main .text_ret2 {
+    padding: 0;
+  }
+  .FAQs main .Qestion {
+    padding: 0;
+  }
 }

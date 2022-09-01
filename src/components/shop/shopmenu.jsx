@@ -98,6 +98,26 @@ class SHOP extends Component {
         (product) => product.category === this.state.category
       );
     }
+    let title = "";
+    if (this.state.category === "") {
+      title = "ALL PRODUCTS";
+    } else if (this.state.category === "all") {
+      title = "ALL PRODUCTS";
+    } else if (this.state.category === "best") {
+      title = "BEST SELLERS";
+    } else if (this.state.category === "Chairs") {
+      title = "CHAIRS";
+    } else if (this.state.category === "Lamps") {
+      title = "LIGHTNING";
+    } else if (this.state.category === "Tables") {
+      title = "COFFE TABELS";
+    } else if (this.state.category === "Clocks") {
+      title = "WOODEN CLOCKS";
+    } else if (this.state.category === "Sofas") {
+      title = "SOFAS";
+    } else {
+      title = "GIFTS";
+    }
     const { onCartChange, onWishAdd } = this.props;
     return (
       <React.Fragment>
@@ -145,13 +165,13 @@ class SHOP extends Component {
               </li>
               <li>
                 <span onClick={() => this.filerFunction("Gifts")}>
-                  <i className="fas fa-arrow-right"></i>Gifts
+                  <i className="fas fa-arrow-right"></i>GIFTS
                 </span>
               </li>
             </ul>
           </aside>
           <main>
-            <h2>PRODUCTS</h2>
+            <h2>{title}</h2>
             <h6>
               Showing {this.state.start + 1} -{" "}
               {this.state.stop > products.length

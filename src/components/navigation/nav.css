@@ -112,7 +112,7 @@ nav {
   justify-content: center;
   gap: 44px;
 }
-.right_sup_nav ul li{
+.right_sup_nav ul li {
   position: relative;
 }
 .right_sup_nav ul li a {
@@ -145,4 +145,18 @@ ion-icon {
 .right_sup_nav ul li i,
 ion-icon {
   margin-right: 5px;
+}
+@media (max-width: 576px) {
+  .nav_header {
+    display: none;
+  }
+  .navigation nav {
+    padding: 0 25px;
+  }
+  .left_sup_nav ul {
+    display: none;
+  }
+  .right_sup_nav ul {
+    display: none;
+  }
 }

@@ -71,7 +71,7 @@
 .slider {
   width: 90%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   padding-top: 70px;
 }
 .slider .slide {
@@ -126,4 +126,43 @@
   font-size: 16px;
   color: #000;
   margin-top: 25px;
+}
+@media (max-width: 576px) {
+  .about .about_store {
+    height: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+  .about .about_store .left_wrapper {
+    width: 100%;
+    padding-right: 0;
+  }
+  .career {
+    margin-top: 20px;
+    height: 40px;
+  }
+  .about .about_store .right_wrapper {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .about .new {
+    flex-direction: column;
+    height: 100%;
+  }
+  .left_news,
+  .right_news {
+    width: 100%;
+    padding: 15% 6%;
+  }
+  .right_news .swiper {
+    height: 50vh !important;
+  }
+  .serv_inner {
+    width: 100%;
+  }
+  .slider {
+    width: 100%;
+    grid-gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

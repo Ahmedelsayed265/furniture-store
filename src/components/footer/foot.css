@@ -51,13 +51,46 @@
 .sub_footer .left_sub p {
   margin: auto 0 8px 10px;
 }
-.sub_footer .right_sub{
+.sub_footer .right_sub {
   display: flex;
   align-items: center;
   gap: 20px;
   padding-right: 80px;
 }
-.sub_footer .right_sub i{
+.sub_footer .right_sub i {
   font-size: 24px;
   color: #000;
+}
+@media (max-width: 576px) {
+  .footer {
+    padding: 0 35px;
+  }
+  .inner_footer {
+    padding-bottom: 0;
+  }
+  .inner_footer h5 {
+    padding: 0;
+    font-size: 15px;
+  }
+  .inner_footer ul {
+    margin-bottom: 40px;
+    margin-top: 15px;
+  }
+  .inner_footer ul li {
+    padding: 0;
+  }
+  .sub_footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .sub_footer .left_sub {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    gap: 10px;
+  }
+  .sub_footer .right_sub {
+    padding: 0;
+  }
 }

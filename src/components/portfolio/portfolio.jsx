@@ -11,7 +11,7 @@ const PORT = (props) => {
         <h2>PROJECT CASES</h2>
         <div className="row">
           {props.projects.map((project) => (
-            <div className="col-4 p-4" key={project.id}>
+            <div className="col-lg-4 col-md-6 p-4" key={project.id}>
               <div className="img_wrap">
                 <img src={project.url} alt={project.id} />
                 <div className="layer">
@@ -23,24 +23,25 @@ const PORT = (props) => {
           ))}
         </div>
         <div className="row sub">
-        <div className="sub_wrap">
-          <h3>
-            Subscribe to our newsletter and receive the latest product news,
-            stories, invitations to exclusive design events and much, much more.
-          </h3>
-          <form className="field">
-            <input placeholder="Enter Email Address" type="email" />
-            <button type="submit">SUBSCRIBE</button>
-          </form>
-          <p>
-            BY SUBSCRIBING, YOU ACCEPT OUR{" "}
-            <Link to="/terms-condition">
-              PRIVACY POLCY{" "}
-              <i className="fa-solid fa-arrow-up-right-from-square"></i>
-            </Link>
-          </p>
+          <div className="sub_wrap">
+            <h3>
+              Subscribe to our newsletter and receive the latest product news,
+              stories, invitations to exclusive design events and much, much
+              more.
+            </h3>
+            <form className="field">
+              <input placeholder="Enter Email Address" type="email" />
+              <button type="submit">SUBSCRIBE</button>
+            </form>
+            <p>
+              BY SUBSCRIBING, YOU ACCEPT OUR{" "}
+              <Link to="/terms-condition">
+                PRIVACY POLCY{" "}
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              </Link>
+            </p>
+          </div>
         </div>
-      </div>
       </section>
     </React.Fragment>
   );

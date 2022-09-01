@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="row inner_footer">
-        <div className="col-3">
+        <div className="col-lg-3 col-6">
           <h5>COMPANY</h5>
           <ul>
             <li>
@@ -32,7 +32,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col-3">
+        <div className="col-lg-3 col-6">
           <h5>CUSTOMER SERVICE</h5>
           <ul>
             <li>
@@ -61,7 +61,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col-3">
+        <div className="col-lg-3 col-6">
           <h5>SOCIAL MEDIA</h5>
           <ul>
             <li>
@@ -86,7 +86,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col-3">
+        <div className="col-lg-3 col-6">
           <h5>PROFILE</h5>
           <ul>
             <li>

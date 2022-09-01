@@ -45,7 +45,7 @@
   background: none;
   outline: none;
 }
-.Login .form_wrap form .form_field .validate_error{
+.Login .form_wrap form .form_field .validate_error {
   width: 100%;
   color: #fff;
   display: flex;
@@ -97,4 +97,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 576px) {
+  .Login .form_wrap form {
+    width: 100%;
+  }
+  .Login .form_wrap form .submit {
+    padding: 15px 0;
+  }
 }

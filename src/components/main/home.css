@@ -356,3 +356,18 @@
 .sub .sub_wrap p a:hover {
   color: #737272;
 }
+@media (max-width: 576px) {
+  .sub .sub_wrap {
+    width: 100%;
+  }
+  .sub .sub_wrap p{
+    padding: 0 5px;
+  }
+  .sub .sub_wrap .field input {
+    width: 60%;
+  }
+  .sub .sub_wrap .field button {
+    width: 30%;
+    font-size: 15px;
+  }
+}

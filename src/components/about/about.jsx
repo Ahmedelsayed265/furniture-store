@@ -94,6 +94,12 @@ const About = () => {
                 DURABLE <br /> MATERIALS
               </h6>
             </div>
+            <div className="slide">
+              <img src={material1} alt="mater6" />
+              <h6>
+                WATER <br /> PROOF
+              </h6>
+            </div>
           </div>
         </div>
       </section>
