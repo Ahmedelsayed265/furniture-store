@@ -82,3 +82,28 @@
   color: #000;
   font-size: 17px;
 }
+@media (max-width: 576px) {
+  .shop {
+    margin: 0 0 50px 0;
+    flex-direction: column;
+  }
+  .shop aside {
+    width: 100%;
+    margin-bottom: 45px;
+  }
+  .shop aside ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+  }
+  .shop aside ul li {
+    margin: 0;
+  }
+  .shop main {
+    width: 100%;
+  }
+  .shop main .row {
+    align-items: center;
+    justify-content: center;
+  }
+}

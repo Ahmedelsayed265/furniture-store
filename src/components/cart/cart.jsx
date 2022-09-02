@@ -19,57 +19,59 @@ class CART extends Component {
       return (
         <div className="fill_cart">
           <h3>SHOPPING CART</h3>
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col">Product</th>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Count</th>
-                <th scope="col">SubTotal</th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.props.products.map((product) => (
-                <tr key={product.id}>
-                  <th scope="row">
-                    <img src={product.url} alt={`img${product.id}`} />
-                  </th>
-                  <td className="name">{product.name}</td>
-                  <td>${product.price}</td>
-                  <td className="count_contaner">
-                    <div className="count">
-                      <button
-                        onClick={() => {
-                          this.props.onDecrement(product);
-                        }}
-                      >
-                      <i className="fa-solid fa-minus"></i>
-                      </button>
-                      <span> {product.count}</span>
-                      <button
-                        onClick={() => {
-                          this.props.onIncrement(product);
-                        }}
-                      >
-                      <i className="fa-solid fa-plus"></i>
-                      </button>
-                    </div>
-                  </td>
-                  <td>${(product.price * product.count).toFixed(2)}</td>
-                  <td>
-                    <i
-                      onClick={() => {
-                        this.props.onDelete(product);
-                      }}
-                      className="fa-solid fa-trash"
-                    ></i>
-                  </td>
+          <div className="tabel_wrap">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Count</th>
+                  <th scope="col">SubTotal</th>
+                  <th scope="col"></th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {this.props.products.map((product) => (
+                  <tr key={product.id}>
+                    <th scope="row">
+                      <img src={product.url} alt={`img${product.id}`} />
+                    </th>
+                    <td className="name"><p>{product.name}</p></td>
+                    <td>${product.price}</td>
+                    <td className="count_contaner">
+                      <div className="count">
+                        <button
+                          onClick={() => {
+                            this.props.onDecrement(product);
+                          }}
+                        >
+                          <i className="fa-solid fa-minus"></i>
+                        </button>
+                        <span> {product.count}</span>
+                        <button
+                          onClick={() => {
+                            this.props.onIncrement(product);
+                          }}
+                        >
+                          <i className="fa-solid fa-plus"></i>
+                        </button>
+                      </div>
+                    </td>
+                    <td>${(product.price * product.count).toFixed(2)}</td>
+                    <td>
+                      <i
+                        onClick={() => {
+                          this.props.onDelete(product);
+                        }}
+                        className="fa-solid fa-trash"
+                      ></i>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
           <div className="checkout">
             <div className="total_sub">
               <h6>CART TOTAL:</h6>

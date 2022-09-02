@@ -45,7 +45,10 @@ tbody td {
   border-bottom: 1px solid #dcdcdc !important;
 }
 .table tbody .name {
-  width: 260px !important;
+  max-width: 110px;
+  border: none;
+}
+.table tbody .name p{
   text-align: start;
 }
 .table thead th:nth-child(2) {
@@ -105,4 +108,51 @@ tbody td {
 span {
   color: #000;
   font-size: 18px;
+}
+@media (max-width: 576px) {
+  .shopping_cart .empty_cart {
+    height: calc(100vh - 130px);
+  }
+  .shopping_cart .empty_cart img {
+    max-width: 100%;
+  }
+  .fill_cart {
+    padding-top: 35px;
+  }
+  .fill_cart .tabel_wrap {
+    overflow-x: auto;
+    margin-bottom: 50px;
+  }
+  .tabel_wrap::-webkit-scrollbar {
+    height: 4px;
+  }  
+  .tabel_wrap::-webkit-scrollbar-track {
+    background-color: #cccccc;
+    border-radius: 0;
+  }
+  .tabel_wrap::-webkit-scrollbar-thumb {
+    background-color: #888;
+    box-shadow: none;
+  }
+  .table tbody .name {
+    max-width: 0;
+    min-width: 200px;
+    padding-top: 22px;
+  }
+  .table tbody .count_contaner{
+    min-width: 190px;
+  }
+  .table tbody td:last-child{
+    min-width: 90px;
+  }
+  .fill_cart .checkout {
+    padding: 0;
+    flex-direction: column;
+    height: 85px;
+    margin-bottom: 25px;
+  }
+  .fill_cart .checkout .total_sub {
+    width: 90%;
+    align-items: baseline;
+  }
 }

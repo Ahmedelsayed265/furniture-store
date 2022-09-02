@@ -28,7 +28,7 @@ class ProductComp extends Component {
     const { product, onWishAdd, onCartChange } = this.props;
     const { id, url2, category, name, price } = this.props.product;
     return (
-      <div className=" col-4 p-3 pro_card">
+      <div className=" col-lg-4 col-12 p-3 pro_card">
         <div className="inner_card">
           <div className="img_wraper">
             <img src={url2} alt={`product-${id}`} />
