@@ -67,6 +67,7 @@ tbody td {
 }
 .table tbody .count button i {
   font-size: 14px;
+  color: #000;
 }
 .table tbody .count span {
   width: 40px;
