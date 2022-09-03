@@ -119,6 +119,10 @@ nav {
   color: #000;
   font-size: 16px;
 }
+.right_sup_nav ul li small {
+  color: #000;
+  font-size: 16px;
+}
 .right_sup_nav ul li .count {
   width: 13px;
   height: 13px;
@@ -157,6 +161,9 @@ ion-icon {
     display: none;
   }
   .right_sup_nav ul {
+    gap: 20px;
+  }
+  .right_sup_nav ul li small {
     display: none;
   }
 }

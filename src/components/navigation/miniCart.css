@@ -78,6 +78,7 @@
   font-weight: 400;
   color: #000;
   font-size: 30px;
+  text-transform: uppercase;
 }
 .mini_cart .cart_container .products {
   width: 100%;
@@ -104,4 +105,15 @@
 .mini_cart .cart_container .Total .total_inner h4 {
   color: #000;
   font-size: 20px;
+}
+@media (max-width: 576px) {
+  .mini_cart {
+    width: 100%;
+  }
+  .mini_cart .cart_container .head {
+    height: 90px;
+  }
+  .mini_cart .cart_container .products {
+    height: calc(70vh - 125px);
+  }
 }

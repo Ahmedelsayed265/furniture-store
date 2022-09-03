@@ -35,7 +35,7 @@ class CART extends Component {
                 {this.props.products.map((product) => (
                   <tr key={product.id}>
                     <th scope="row">
-                      <img src={product.url} alt={`img${product.id}`} />
+                      <img src={product.url2} alt={`img${product.id}`} />
                     </th>
                     <td className="name"><p>{product.name}</p></td>
                     <td>${product.price}</td>

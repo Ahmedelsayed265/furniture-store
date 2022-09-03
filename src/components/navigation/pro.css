@@ -33,3 +33,11 @@
   cursor: pointer;
   color: #000;
 }
+@media (max-width: 576px) {
+  .product {
+    margin-bottom: 18px;
+  }
+  .product .pro_detail {
+    padding-top: 0;
+  }
+}
