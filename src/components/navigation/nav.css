@@ -115,6 +115,19 @@ nav {
 .right_sup_nav ul li {
   position: relative;
 }
+.right_sup_nav ul .toggle_nav {
+  display: none;
+}
+.right_sup_nav ul .toggle_nav .toggler {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 5px;
+}
+.right_sup_nav ul .toggle_nav .toggler ion-icon {
+  font-size: 24px;
+  margin-right: 0;
+}
 .right_sup_nav ul li a {
   color: #000;
   font-size: 16px;
@@ -157,13 +170,30 @@ ion-icon {
   .navigation nav {
     padding: 0 25px;
   }
-  .left_sup_nav ul {
-    display: none;
+  .left_sup_nav .nav_ul {
+    position: fixed;
+    z-index: 999999999999999;
+    top: 80px;
+    left: 100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    flex-direction: column;
+    background-color: #e6e4e4;
+    transition: 0.5s ease-in-out;
+  }
+  .left_sup_nav .nav_ul.active {
+    left: 0;
   }
   .right_sup_nav ul {
-    gap: 20px;
+    gap: 14px;
+  }
+  .right_sup_nav ul .toggle_nav {
+    display: block;
   }
   .right_sup_nav ul li small {
     display: none;
+  }
+  .right_sup_nav ul li .count {
+    font-size: 9px;
   }
 }

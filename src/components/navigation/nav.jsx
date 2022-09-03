@@ -8,11 +8,22 @@ class Nav extends Component {
   state = {
     isActive: false,
     isCartActive: false,
+    isNavActive: false,
   };
   toggleLanguages = () => {
     let activeClass = this.state.isActive;
     activeClass = !activeClass;
     this.setState({ isActive: activeClass });
+  };
+  toggleNavigation = () => {
+    let activeClass = this.state.isNavActive;
+    activeClass = !activeClass;
+    this.setState({ isNavActive: activeClass });
+  };
+  closeNav = () => {
+    let activeClass = this.state.isNavActive;
+    activeClass = false;
+    this.setState({ isNavActive: activeClass });
   };
   openCart = () => {
     let activeClass = this.state.isCartActive;
@@ -75,21 +86,33 @@ class Nav extends Component {
               <Link to="/home">
                 <img src={EskilLogo} alt="Logo" />
               </Link>
-              <ul>
+              <ul
+                className={`nav_ul ${this.state.isNavActive ? "active" : ""}`}
+              >
                 <li>
-                  <NavLink to="/home">HOME</NavLink>
+                  <NavLink onClick={this.closeNav} to="/home">
+                    HOME
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/about">ABOUT</NavLink>
+                  <NavLink onClick={this.closeNav} to="/about">
+                    ABOUT
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/portfolio">PORTFOLIO</NavLink>
+                  <NavLink onClick={this.closeNav} to="/portfolio">
+                    PORTFOLIO
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/shop">SHOP</NavLink>
+                  <NavLink onClick={this.closeNav} to="/shop">
+                    SHOP
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/contact">CONTACT</NavLink>
+                  <NavLink onClick={this.closeNav} to="/contact">
+                    CONTACT
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -112,6 +135,15 @@ class Nav extends Component {
                   <span className="count">{this.props.productsCount}</span>
                   <ion-icon name="bag-outline"></ion-icon>
                   <small>Cart ${this.navReduce()}</small>
+                </li>
+                <li className="toggle_nav" onClick={this.toggleNavigation}>
+                  <div className="toggler">
+                    {this.state.isNavActive ? (
+                      <ion-icon name="close-outline"></ion-icon>
+                    ) : (
+                      <ion-icon name="menu-outline"></ion-icon>
+                    )}
+                  </div>
                 </li>
               </ul>
             </div>
