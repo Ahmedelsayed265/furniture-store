@@ -40,23 +40,23 @@ class Checkout extends Component {
           <div className="billing_container">
             <h4>Billing details</h4>
             <form className="row">
-              <div className="field col-6 pe-4">
+              <div className="field col-lg-6 col-12 pe-lg-4">
                 <label htmlFor="firstName">First name *</label>
                 <input name="firstName" type="text" id="firstName" />
               </div>
-              <div className="field col-6 ps-4">
+              <div className="field col-lg-6 col-12 ps-lg-4">
                 <label htmlFor="LastName">Last name *</label>
                 <input name="LastName" type="text" id="LastName" />
               </div>
-              <div className="field col-6 pe-4">
+              <div className="field col-lg-6 col-12 pe-lg-4">
                 <label htmlFor="companyName">Company name (optional)</label>
                 <input name="companyName" type="text" id="companyName" />
               </div>
-              <div className="field col-6 ps-4">
+              <div className="field col-lg-6 col-12 ps-lg-4">
                 <label htmlFor="country">Country / Region *</label>
                 <input name="country" type="text" id="country" />
               </div>
-              <div className="field col-6 pe-4">
+              <div className="field col-lg-6 col-12 pe-lg-4">
                 <label htmlFor="street">Street address</label>
                 <input
                   name="street"
@@ -65,7 +65,7 @@ class Checkout extends Component {
                   placeholder="House number and street name"
                 />
               </div>
-              <div className="field col-6 ps-4">
+              <div className="field col-lg-6 col-12 ps-lg-4">
                 <label htmlFor="apartment">Apartment</label>
                 <input
                   name="apartment"
@@ -74,19 +74,19 @@ class Checkout extends Component {
                   placeholder="Apartment, suite, unit, etc. (optional)"
                 />
               </div>
-              <div className="field col-6 pe-4">
+              <div className="field col-lg-6 col-12 pe-lg-4">
                 <label htmlFor="zip">Postcode / ZIP *</label>
                 <input name="zip" type="text" id="zip" />
               </div>
-              <div className="field col-6 ps-4">
+              <div className="field col-lg-6 col-12 ps-lg-4">
                 <label htmlFor="town">Town / City *</label>
                 <input name="town" type="text" id="town" />
               </div>
-              <div className="field col-6 pe-4">
+              <div className="field col-lg-6 col-12 pe-lg-4">
                 <label htmlFor="phone">Phone *</label>
                 <input name="phone" type="text" id="phone" />
               </div>
-              <div className="field col-6 ps-4">
+              <div className="field col-lg-6 col-12 ps-lg-4">
                 <label htmlFor="email">Email address *</label>
                 <input name="email" type="text" id="email" />
               </div>

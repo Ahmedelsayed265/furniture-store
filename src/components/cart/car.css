@@ -8,7 +8,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .shopping_cart .empty_cart img {
   max-width: 55%;
   z-index: 0;
@@ -38,7 +37,7 @@ tbody th,
 tbody td {
   text-align: center;
 }
-.shopping_cart .table tbody tr {
+.shopping_cart .table tbody tr:not(:last-child) {
   border-bottom: 1px solid #dcdcdc !important;
 }
 .table thead tr {
@@ -48,7 +47,7 @@ tbody td {
   max-width: 110px;
   border: none;
 }
-.table tbody .name p{
+.table tbody .name p {
   text-align: start;
 }
 .table thead th:nth-child(2) {
@@ -125,34 +124,36 @@ span {
   }
   .tabel_wrap::-webkit-scrollbar {
     height: 4px;
-  }  
+  }
   .tabel_wrap::-webkit-scrollbar-track {
     background-color: #cccccc;
-    border-radius: 0;
+    border-radius: 2px;
   }
   .tabel_wrap::-webkit-scrollbar-thumb {
     background-color: #888;
     box-shadow: none;
+    border-radius: 2px;
   }
   .table tbody .name {
     max-width: 0;
     min-width: 200px;
     padding-top: 22px;
   }
-  .table tbody .count_contaner{
+  .table tbody .count_contaner {
     min-width: 190px;
   }
-  .table tbody td:last-child{
+  .table tbody td:last-child {
     min-width: 90px;
   }
   .fill_cart .checkout {
     padding: 0;
     flex-direction: column;
+    align-items: baseline;
     height: 85px;
     margin-bottom: 25px;
   }
   .fill_cart .checkout .total_sub {
-    width: 90%;
+    width: 100%;
     align-items: baseline;
   }
 }

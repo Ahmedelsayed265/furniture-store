@@ -121,7 +121,7 @@
   font-weight: 500;
 }
 .Checkout .billing_container form .order_details .shiping {
-  padding: 15px 50px 15px 0 !important;
+  padding: 15px 50px 15px 0;
 }
 .Checkout .billing_container form .order_details .shiping .ship {
   margin-top: 5px;
@@ -161,4 +161,12 @@
   font-size: 16px;
   height: 40px;
   margin-left: 12px;
+}
+@media (max-width: 576px) {
+  .Checkout .billing_container form .order_details .head_order {
+    padding-right: 50px;
+  }
+  .Checkout .billing_container form .order_details .shiping {
+    padding-right: 0;
+  }
 }
