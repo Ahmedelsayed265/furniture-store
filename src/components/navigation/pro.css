@@ -1,6 +1,6 @@
 .product {
   width: 100%;
-  height: calc(23.33vh - 31.67px);
+  height: calc(23.33vh - 41.67px);
   display: flex;
   margin-bottom: 10px;
 }
@@ -36,6 +36,7 @@
 @media (max-width: 576px) {
   .product {
     margin-bottom: 18px;
+    height: calc(23.33vh - 58.67px);
   }
   .product .pro_detail {
     padding-top: 0;
