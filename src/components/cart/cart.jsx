@@ -37,7 +37,9 @@ class CART extends Component {
                     <th scope="row">
                       <img src={product.url2} alt={`img${product.id}`} />
                     </th>
-                    <td className="name"><p>{product.name}</p></td>
+                    <td className="name">
+                      <p>{product.name}</p>
+                    </td>
                     <td>${product.price}</td>
                     <td className="count_contaner">
                       <div className="count">

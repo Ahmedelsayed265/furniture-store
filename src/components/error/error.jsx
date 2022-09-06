@@ -1,7 +1,7 @@
 import React from "react";
 import "./error.css";
 import img from "./../assest/404-img-1.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 const notFound = () => {
   return (
     <div className="error_container">

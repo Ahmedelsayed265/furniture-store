@@ -53,7 +53,7 @@
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #000;
 }
-.swiper-pagination-bullet::after{
+.swiper-pagination-bullet::after {
   position: absolute;
   content: "";
   top: -4px;

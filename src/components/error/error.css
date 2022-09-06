@@ -29,13 +29,13 @@
   text-decoration: underline;
 }
 @media (max-width: 576px) {
-  .error_container img{
+  .error_container img {
     max-width: 100%;
   }
   .error_container p {
     max-width: 100%;
   }
-  .error_container a{
+  .error_container a {
     margin-top: 20px;
   }
 }
