@@ -1,15 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import cart from "./../assest/cart.png";
 import "./car.css";
-class CART extends Component {
-  cartReduce() {
-    return this.props.products
+const CART = (props) => {
+  let cartReduce = () => {
+    return props.products
       .reduce((acc, product) => acc + product.count * product.price, 0)
       .toFixed(2);
-  }
-  ifCartEmpty() {
-    if (this.props.products.length === 0) {
+  };
+  let ifCartEmpty = () => {
+    if (props.products.length === 0) {
       return (
         <div className="empty_cart">
           <img src={cart} alt="empty" />
@@ -32,7 +32,7 @@ class CART extends Component {
                 </tr>
               </thead>
               <tbody>
-                {this.props.products.map((product) => (
+                {props.products.map((product) => (
                   <tr key={product.id}>
                     <th scope="row">
                       <img src={product.url2} alt={`img${product.id}`} />
@@ -45,7 +45,7 @@ class CART extends Component {
                       <div className="count">
                         <button
                           onClick={() => {
-                            this.props.onDecrement(product);
+                            props.onDecrement(product);
                           }}
                         >
                           <i className="fa-solid fa-minus"></i>
@@ -53,7 +53,7 @@ class CART extends Component {
                         <span> {product.count}</span>
                         <button
                           onClick={() => {
-                            this.props.onIncrement(product);
+                            props.onIncrement(product);
                           }}
                         >
                           <i className="fa-solid fa-plus"></i>
@@ -64,7 +64,7 @@ class CART extends Component {
                     <td>
                       <i
                         onClick={() => {
-                          this.props.onDelete(product);
+                          props.onDelete(product);
                         }}
                         className="fa-solid fa-trash"
                       ></i>
@@ -77,24 +77,22 @@ class CART extends Component {
           <div className="checkout">
             <div className="total_sub">
               <h6>CART TOTAL:</h6>
-              <span>${this.cartReduce()}</span>
+              <span>${cartReduce()}</span>
             </div>
             <Link to="/checkout">PROCEED TO CHECKOUT</Link>
           </div>
         </div>
       );
     }
-  }
-  render() {
-    return (
-      <React.Fragment>
-        <div className="go_back">
-          <Link to="/home">Home</Link> / Shopping Cart
-        </div>
-        <section className="shopping_cart">{this.ifCartEmpty()}</section>
-      </React.Fragment>
-    );
-  }
-}
+  };
+  return (
+    <React.Fragment>
+      <div className="go_back">
+        <Link to="/home">Home</Link> / Shopping Cart
+      </div>
+      <section className="shopping_cart">{ifCartEmpty()}</section>
+    </React.Fragment>
+  );
+};
 
 export default CART;
