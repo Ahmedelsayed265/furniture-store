@@ -8,36 +8,12 @@ class SHOP extends Component {
     stop: 21,
     category: "",
   };
-  firstPage = () => {
+  selectedPage = (sta, sto) => {
     let state = { ...this.state };
     let start = state.start;
     let stop = state.stop;
-    start = 0;
-    stop = 21;
-    this.setState({ start: start, stop: stop });
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-  secondPage = () => {
-    let state = { ...this.state };
-    let start = state.start;
-    let stop = state.stop;
-    start = 21;
-    stop = 42;
-    this.setState({ start: start, stop: stop });
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-  thirdPage = () => {
-    let state = { ...this.state };
-    let start = state.start;
-    let stop = state.stop;
-    start = 42;
-    stop = 63;
+    start = sta;
+    stop = sto;
     this.setState({ start: start, stop: stop });
     window.scrollTo({
       top: 0,
@@ -78,18 +54,15 @@ class SHOP extends Component {
     let stateCategory = this.state.category;
     stateCategory = category;
     this.setState({ category: stateCategory });
-    let start = this.state.start;
+    let start = this.state.start,
+      stop = this.state.stop;
     start = 0;
-    this.setState({ start: start });
-    let stop = this.state.stop;
     stop = 21;
-    this.setState({ stop: stop });
+    this.setState({ start: start, stop: stop });
   };
   render() {
     let products = [];
-    if (this.state.category === "") {
-      products = this.props.products;
-    } else if (this.state.category === "all") {
+    if (this.state.category === "" || this.state.category === "all") {
       products = this.props.products;
     } else if (this.state.category === "best") {
       products = this.props.products.filter((p) => p.bestSeller);
@@ -99,9 +72,7 @@ class SHOP extends Component {
       );
     }
     let title = "";
-    if (this.state.category === "") {
-      title = "ALL PRODUCTS";
-    } else if (this.state.category === "all") {
+    if (this.state.category === "" || this.state.category === "all") {
       title = "ALL PRODUCTS";
     } else if (this.state.category === "best") {
       title = "BEST SELLERS";
@@ -196,11 +167,11 @@ class SHOP extends Component {
             ) : (
               <div className="navigtor">
                 <i className="fas fa-angle-left" onClick={this.prevPage}></i>
-                <span onClick={this.firstPage}>1</span>
+                <span onClick={() => this.selectedPage(0, 21)}>1</span>
                 <b></b>
-                <span onClick={this.secondPage}>2</span>
+                <span onClick={() => this.selectedPage(21, 42)}>2</span>
                 <b></b>
-                <span onClick={this.thirdPage}>3</span>
+                <span onClick={() => this.selectedPage(42, 63)}>3</span>
                 <i className="fas fa-angle-right" onClick={this.nextPage}></i>
               </div>
             )}
