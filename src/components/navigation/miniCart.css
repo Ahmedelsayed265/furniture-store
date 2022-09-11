@@ -87,6 +87,9 @@
   flex-direction: column;
   overflow-y: scroll;
 }
+.mini_cart .cart_container .products img {
+  max-width: 100%;
+}
 .mini_cart .cart_container .products::-webkit-scrollbar {
   width: 0;
 }
