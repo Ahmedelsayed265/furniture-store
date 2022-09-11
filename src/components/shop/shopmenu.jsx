@@ -162,9 +162,7 @@ class SHOP extends Component {
                   />
                 ))}
             </div>
-            {products.length < 21 ? (
-              ""
-            ) : (
+            {products.length > 21 && (
               <div className="navigtor">
                 <i className="fas fa-angle-left" onClick={this.prevPage}></i>
                 <span onClick={() => this.selectedPage(0, 21)}>1</span>
