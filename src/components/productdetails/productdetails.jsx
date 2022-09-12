@@ -44,7 +44,10 @@ class Details extends Component {
                   }}
                   className="add_btn"
                 >
-                  <ion-icon name="bag-outline"></ion-icon>Add to cart
+                  <ion-icon name="bag-outline"></ion-icon>
+                  {product.count > 0 && product.inCart
+                    ? `${product.count} in cart`
+                    : "Add to cart"}
                 </button>
               </div>
               <div className="favs">
