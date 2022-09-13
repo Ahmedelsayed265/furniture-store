@@ -130,8 +130,8 @@
   cursor: pointer;
 }
 .brands_wrap .brands div img:hover {
-  margin-bottom: 20px;
-  transition: 0.3s ease-in-out;
+  transform: rotateY(360deg);
+  transition: 1.2s ease-in-out;
 }
 .featured {
   height: 100%;
