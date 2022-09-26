@@ -20,18 +20,18 @@ import SHOP from "./../components/shop/shopmenu";
 class App extends Component {
   state = {
     products: [],
-    projects: [],
+    projects: []
   };
   async componentDidMount() {
     let { data } = await axios.get(
       "https://eskil-furniture-api.herokuapp.com/products"
     );
-    let products = data.filter((pro) => pro.category !== "projects");
+    let products = data.filter(pro => pro.category !== "projects");
     this.setState({ products });
-    let projects = data.filter((pro) => pro.category === "projects");
+    let projects = data.filter(pro => pro.category === "projects");
     this.setState({ projects });
   }
-  inCartAdd = (i) => {
+  inCartAdd = i => {
     let products = [...this.state.products];
     let index = products.indexOf(i);
     products[index] = { ...products[index] };
@@ -39,7 +39,7 @@ class App extends Component {
     products[index].count = 1;
     this.setState({ products });
   };
-  inCartAddfd = (i) => {
+  inCartAddfd = i => {
     console.log(i);
     let products = [...this.state.products];
     let index = products.indexOf(i);
@@ -47,7 +47,7 @@ class App extends Component {
     products[index].inCart = true;
     this.setState({ products });
   };
-  inCartDelete = (i) => {
+  inCartDelete = i => {
     let products = [...this.state.products];
     let index = products.indexOf(i);
     products[index] = { ...products[index] };
@@ -55,14 +55,14 @@ class App extends Component {
     products[index].count = 0;
     this.setState({ products });
   };
-  increment = (i) => {
+  increment = i => {
     let products = [...this.state.products];
     let index = products.indexOf(i);
     products[index] = { ...products[index] };
     products[index].count++;
     this.setState({ products });
   };
-  decrement = (i) => {
+  decrement = i => {
     let products = [...this.state.products];
     let index = products.indexOf(i);
     products[index] = { ...products[index] };
@@ -71,14 +71,14 @@ class App extends Component {
     }
     this.setState({ products });
   };
-  inListAdd = (i) => {
+  inListAdd = i => {
     let products = [...this.state.products];
     let index = products.indexOf(i);
     products[index] = { ...products[index] };
     products[index].wished = !products[index].wished;
     this.setState({ products });
   };
-  inListDelete = (i) => {
+  inListDelete = i => {
     let products = [...this.state.products];
     let index = products.indexOf(i);
     products[index] = { ...products[index] };
@@ -89,96 +89,89 @@ class App extends Component {
     return (
       <React.Fragment>
         <Nav
-          products={this.state.products.filter((p) => p.inCart && p.count > 0)}
+          products={this.state.products.filter(p => p.inCart && p.count > 0)}
           productsCount={
-            this.state.products.filter((p) => p.inCart && p.count > 0).length
+            this.state.products.filter(p => p.inCart && p.count > 0).length
           }
           onDelete={this.inCartDelete}
-          wishCount={this.state.products.filter((p) => p.wished).length}
+          wishCount={this.state.products.filter(p => p.wished).length}
         />
         <div className="main_entire">
           <Switch>
             <Route
               path="/home"
-              render={(props) => (
+              render={props =>
                 <HomeComp
-                  products={this.state.products.filter((p) => p.featured)}
+                  products={this.state.products.filter(p => p.featured)}
                   {...props}
                   onCartChange={this.inCartAdd}
                   onWishAdd={this.inListAdd}
-                />
-              )}
+                />}
             />
             <Route path="/about" component={About} />
             <Route
               path="/portfolio"
-              render={(props) => (
-                <PORT projects={this.state.projects} {...props} />
-              )}
+              render={props =>
+                <PORT projects={this.state.projects} {...props} />}
             />
             <Route
               path="/shop"
-              render={(props) => (
+              render={props =>
                 <SHOP
                   products={this.state.products.filter(
-                    (product) => product.category !== "projects"
+                    product => product.category !== "projects"
                   )}
                   onWishAdd={this.inListAdd}
                   onCartChange={this.inCartAdd}
                   {...props}
-                />
-              )}
+                />}
             />
             <Route path="/contact" component={Contact} />
             <Route path="/account" component={MyAccount} />
             <Route
               path="/wishlist"
-              render={(props) => (
+              render={props =>
                 <Wish
-                  products={this.state.products.filter((p) => p.wished)}
+                  products={this.state.products.filter(p => p.wished)}
                   onCartChange={this.inCartAdd}
                   onXChange={this.inListDelete}
                   {...props}
-                />
-              )}
+                />}
             />
             <Route
               path="/cart"
-              render={(props) => (
+              render={props =>
                 <CART
-                  products={this.state.products.filter((p) => p.inCart)}
+                  products={this.state.products.filter(p => p.inCart)}
                   onIncrement={this.increment}
                   onDecrement={this.decrement}
                   onDelete={this.inCartDelete}
                   {...props}
-                />
-              )}
+                />}
             />
             <Route
               path="/products-details/:id/:name?"
-              render={(props) => (
+              render={props =>
                 <Details
                   products={this.state.products.filter(
-                    (p) => p.category !== "projects"
+                    p => p.category !== "projects"
                   )}
                   onWishAdd={this.inListAdd}
                   onCartAddfd={this.inCartAddfd}
                   onIncrement={this.increment}
                   onDecrement={this.decrement}
                   {...props}
-                />
-              )}
+                />}
             />
             <Route
               path="/checkout"
-              render={(props) => (
+              render={props =>
                 <Checkout
                   {...props}
                   products={this.state.products.filter(
-                    (p) => p.inCart && p.count > 0
+                    p => p.inCart && p.count > 0
                   )}
-                />
-              )}
+                />}
             />
             <Route path="/FAQs" component={FAQpage} />
             <Route path="/ERROR404" component={notFound} />

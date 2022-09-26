@@ -8,7 +8,7 @@ class Nav extends Component {
   state = {
     isActive: false,
     isCartActive: false,
-    isNavActive: false,
+    isNavActive: false
   };
   toggleLanguages = () => {
     let activeClass = this.state.isActive;
@@ -52,29 +52,29 @@ class Nav extends Component {
             <div className="right_head">
               <div className="d-flex align-items-center justify-content-center">
                 <Link to="#">
-                  <i className="fab fa-facebook-square"></i>
+                  <i className="fab fa-facebook-square" />
                 </Link>
                 <Link to="#">
-                  <i className="fab fa-instagram"></i>
+                  <i className="fab fa-instagram" />
                 </Link>
                 <Link to="#">
-                  <i className="fab fa-twitter"></i>
+                  <i className="fab fa-twitter" />
                 </Link>
                 <span onClick={this.toggleLanguages}>
-                  English <i className="fas fa-angle-down"></i>
+                  English <i className="fas fa-angle-down" />
                 </span>
                 <div
                   className={`down_drop ${this.state.isActive ? "active" : ""}`}
                 >
                   <ul>
                     <li>
-                      <i className="fas fa-arrow-right"></i>French
+                      <i className="fas fa-arrow-right" />French
                     </li>
                     <li>
-                      <i className="fas fa-arrow-right"></i>Greek
+                      <i className="fas fa-arrow-right" />Greek
                     </li>
                     <li>
-                      <i className="fas fa-arrow-right"></i>Italian
+                      <i className="fas fa-arrow-right" />Italian
                     </li>
                   </ul>
                 </div>
@@ -120,29 +120,33 @@ class Nav extends Component {
               <ul>
                 <li>
                   <Link to="/account">
-                    <i className="far fa-user"></i>
+                    <i className="far fa-user" />
                     <small>Account</small>
                   </Link>
                 </li>
                 <li>
                   <Link to="/wishlist">
-                    <i className="far fa-heart"></i>
+                    <i className="far fa-heart" />
                     <small>Wishlist</small>
-                    <span className="count">{this.props.wishCount}</span>
+                    <span className="count">
+                      {this.props.wishCount}
+                    </span>
                   </Link>
                 </li>
                 <li onClick={this.openCart}>
-                  <span className="count">{this.props.productsCount}</span>
-                  <ion-icon name="bag-outline"></ion-icon>
-                  <small>Cart ${this.navReduce()}</small>
+                  <span className="count">
+                    {this.props.productsCount}
+                  </span>
+                  <ion-icon name="bag-outline" />
+                  <small>
+                    Cart ${this.navReduce()}
+                  </small>
                 </li>
                 <li className="toggle_nav" onClick={this.toggleNavigation}>
                   <div className="toggler">
-                    {this.state.isNavActive ? (
-                      <ion-icon name="close-outline"></ion-icon>
-                    ) : (
-                      <ion-icon name="menu-outline"></ion-icon>
-                    )}
+                    {this.state.isNavActive
+                      ? <ion-icon name="close-outline" />
+                      : <ion-icon name="menu-outline" />}
                   </div>
                 </li>
               </ul>
