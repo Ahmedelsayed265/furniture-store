@@ -24,7 +24,7 @@ class App extends Component {
   };
   async componentDidMount() {
     let { data } = await axios.get(
-      "https://eskil-furniture-api.herokuapp.com/products"
+      "https://carpal-accurate-castanet.glitch.me/products"
     );
     let products = data.filter(pro => pro.category !== "projects");
     this.setState({ products });
