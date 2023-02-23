@@ -12,10 +12,10 @@ const SWIP = () => {
       spaceBetween={50}
       slidesPerView={1}
       autoplay={{
-        delay: 3000,
+        delay: 3000
       }}
       pagination={{
-        clickable: true,
+        clickable: true
       }}
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
